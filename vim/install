@@ -11,5 +11,5 @@ fi
 ln -sfv "$DOTFILES_DIR/vim/vimrc" ~/.vimrc
 ln -sfv "$DOTFILES_DIR/vim/gvimrc" ~/.gvimrc
 
-ln -sfv "$DOTFILES_DIR/vim/plugin" ~/.vim/plugin
-ln -sfv "$DOTFILES_DIR/vim/doc" ~/.vim/doc
+ln -sfv "$DOTFILES_DIR/vim/plugin/" ~/.vim/
+ln -sfv "$DOTFILES_DIR/vim/doc/" ~/.vim/
