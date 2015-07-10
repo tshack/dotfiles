@@ -8,6 +8,6 @@ EXTRA_DIR="$HOME/.extra"
 # Update dotfiles itself via git
 [ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
 
-# Install/Update symlinks
-ln -sfv "$DOTFILES_DIR/tmux/tmux.conf" ~/.tmux.conf
-#ln -sfv "$DOTFILES_DIR/zsh/zshrc" ~/.zshrc
+source $DOTFILES_DIR/vim/install
+source $DOTFILES_DIR/tmux/install
+#source $DOTFILES_DIR/zsh/install

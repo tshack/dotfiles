@@ -1,0 +1,25 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FILENAME: gvimrc
+" AUTHOR: James Shackleford
+" UPDATED: 07.10.2015
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" disable toolbar
+set guioptions-=T
+
+" enable mouse
+set mouse=a	
+
+" Pretty good fonts for remote X sessions
+"set guifont=bitstream\ vera\ sans\ mono\ 12
+"set guifont=dejavu\ sans\ mono\ bold\ 12
+set guifont=Monospace\ 11
+
+" let's be easy on the eyes
+colorscheme slate
+
+" the standard 80 + line numbers
+set columns=90
+
+" make vim usefully tall
+set lines=50

@@ -1,0 +1,3 @@
+# vim:syntax=sh:
+
+ln -sfv "$DOTFILES_DIR/tmux/tmux.conf" ~/.tmux.conf

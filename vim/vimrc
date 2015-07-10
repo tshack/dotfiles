@@ -1,0 +1,166 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FILENAME: vimrc
+" AUTHOR: James Shackleford
+" UPDATED: 07.10.2015
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" vim mode
+set nocompatible
+
+" Enable loading plugin files for specific file types
+filetype plugin on
+filetype indent on
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" GENERAL SETTINGS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+" keep a backup file
+set backup
+" backup location
+set backupdir=~/.vim_backup/
+" keep 50 lines of command line history
+set history=50
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FORMATTING
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" automatic c code indenting
+"set cindent 
+" automatically indent
+set autoindent
+" use spaces instead of tabs
+set expandtab
+" # of characters limited to a line
+set textwidth=78
+" # of spaces for tab
+"set tabstop=8
+set tabstop=4
+" # of spaces for an indent
+set shiftwidth=4
+" round indent to multiple of shiftwidth
+set shiftround
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SEARCHING
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" do incremental searching
+set incsearch
+" searches wrap from end of file
+set wrapscan
+" highlight searches
+set hlsearch
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VIRTUAL DISPLAY
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" always show line and column position
+set ruler
+" display incomplete commands
+set showcmd	
+" disable line wrapping
+set nowrap	
+" enable line numbers
+set number
+" fold based on indent
+set foldmethod=syntax
+" deepest fold is 10 levels
+set foldnestmax=10
+" dont fold by default
+set nofoldenable
+" this is just what i use
+set foldlevel=1
+" line number width
+set numberwidth=4
+" turn on syntax highlighting
+syntax on
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TagList
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" exuberant ctags location
+let Tlist_Ctags_Cmd='/usr/bin/ctags'
+" hot key for the taglist
+map T :TlistToggle<CR>
+" auto open TagList on supported files
+let Tlist_Auto_Open=1 
+" process files even when taglist panel is not open
+let Tlist_Process_File_Always=1
+" close vim if taglist is only windows
+let Tlist_Exit_OnlyWindow=1
+" taglist only shows current file?
+let Tlist_Show_One_File=0
+" auto-fold taglist for all but currently used file?
+let Tlist_File_Fold_Auto_Close=1
+" set width of taglist panel
+let Tlist_WinWidth=40
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim-Script: clang_complete
+"   git clone git://github.com/Rip-Rip/clang_complete.git
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" use libclang.so instead of clang executable
+let g:clang_use_library=1
+" path to libclang.so    [ broken - edit cindex.py directly ]
+let g_clang_library_path='/home/tshack/lib/'
+" automatic suggestion (slow).  manually suggest with ^X^U (or supertab)
+let g:clang_complete_auto=0
+" [popup menu] non-selected item background and text color
+highlight Pmenu guibg=darkslategray
+" [popup menu] selected item background and text color
+highlight PmenuSel guibg=red guifg=white gui=bold
+" [popup menu] set height in # of lines
+set pumheight=15
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim-Script: SuperTab
+"   git clone git://github.com/ervandew/supertab.git
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SuperTab option for context aware completion
+let g:SuperTabDefaultCompletionType = "context"
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" autocommand fancy-pants stuff
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Only do this stuff when compiled with support for autocommands.
+if has("autocmd")
+	" Put these in an autocmd group, so that we can delete them easily.
+	augroup vimrcEx
+	au!
+	" When editing a file, always jump to the last known cursor position.
+	" Don't do it when the position is invalid or when inside an event handler
+	" (happens when dropping a file on gvim).
+	autocmd BufReadPost *
+	  \ if line("'\"") > 0 && line("'\"") <= line("$") |
+	  \   exe "normal! g`\"" |
+	  \ endif
+	augroup END
+endif " has("autocmd")
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" diff functionality
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Convenient command to see the difference between the current buffer and the
+" file it was loaded from, thus the changes you made.
+command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+	 	\ | wincmd p | diffthis
+
+
+
+:if has('gui_running')
+    " GUI mode only stuff
+:else
+    " terminal mode only stuff
+    colorscheme elflord
+:endif
+
+let @s = 'iSigned-off-by: James A Shackleford <shack@linux.com>'
