@@ -16,7 +16,9 @@ filetype indent on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/taglist.vim'
+Plug 'bling/vim-airline'
 call plug#end()
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL SETTINGS
@@ -29,13 +31,15 @@ set backup
 set backupdir=~/.vim_backup/
 " keep 50 lines of command line history
 set history=50
+" set font
+set guifont=Literation\ Mono\ Powerline\ 14
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FORMATTING
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " automatic c code indenting
-"set cindent 
+"set cindent
 " automatically indent
 set autoindent
 " use spaces instead of tabs
@@ -67,9 +71,9 @@ set hlsearch
 " always show line and column position
 set ruler
 " display incomplete commands
-set showcmd	
+set showcmd
 " disable line wrapping
-set nowrap	
+set nowrap
 " enable line numbers
 set number
 " fold based on indent
@@ -106,6 +110,12 @@ let Tlist_File_Fold_Auto_Close=1
 " set width of taglist panel
 let Tlist_WinWidth=40
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Airline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" enable powerline font
+let g:airline_powerline_fonts = 1
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim-Script: clang_complete
@@ -138,17 +148,17 @@ let g:SuperTabDefaultCompletionType = "context"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Only do this stuff when compiled with support for autocommands.
 if has("autocmd")
-	" Put these in an autocmd group, so that we can delete them easily.
-	augroup vimrcEx
-	au!
-	" When editing a file, always jump to the last known cursor position.
-	" Don't do it when the position is invalid or when inside an event handler
-	" (happens when dropping a file on gvim).
-	autocmd BufReadPost *
-	  \ if line("'\"") > 0 && line("'\"") <= line("$") |
-	  \   exe "normal! g`\"" |
-	  \ endif
-	augroup END
+    " Put these in an autocmd group, so that we can delete them easily.
+    augroup vimrcEx
+    au!
+    " When editing a file, always jump to the last known cursor position.
+    " Don't do it when the position is invalid or when inside an event handler
+    " (happens when dropping a file on gvim).
+    autocmd BufReadPost *
+      \ if line("'\"") > 0 && line("'\"") <= line("$") |
+      \   exe "normal! g`\"" |
+      \ endif
+    augroup END
 endif " has("autocmd")
 
 
@@ -158,7 +168,7 @@ endif " has("autocmd")
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
 command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-	 	\ | wincmd p | diffthis
+        \ | wincmd p | diffthis
 
 
 
