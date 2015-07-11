@@ -4,3 +4,14 @@ YouCompleteMe
     -- cmake
     -- build-essential
     -- python-dev
+
+Git smtp (with git-credentials)
+-- sudo
+  -- APT
+    -- git-email
+    -- libgnome-keyring-dev
+**notes*************************************************************
+sudo apt-get install libgnome-keyring-dev
+cd /usr/share/doc/git/contrib/credential/gnome-keyring/
+make
+********************************************************************
