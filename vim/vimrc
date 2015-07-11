@@ -87,8 +87,8 @@ syntax on
 let Tlist_Ctags_Cmd='/usr/bin/ctags'
 " hot key for the taglist
 map T :TlistToggle<CR>
-" auto open TagList on supported files
-let Tlist_Auto_Open=1 
+" don't auto open TagList on supported files
+let Tlist_Auto_Open=0
 " process files even when taglist panel is not open
 let Tlist_Process_File_Always=1
 " close vim if taglist is only windows
