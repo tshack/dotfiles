@@ -1,18 +1,10 @@
-syntax on
-set showcmd
 set nowrap
 set number
 set numberwidth=4
 set hlsearch
-set backup
-set backupdir=~/.vim_backup/
-set history=50
 set guifont=Literation\ Mono\ Powerline\ 14
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
+colorscheme elflord
 
-" automatically indent
-set autoindent
 " use spaces instead of tabs
 set expandtab
 " # of characters limited to a line
@@ -25,9 +17,3 @@ set shiftwidth=4
 set shiftround
 " automatic c code indenting
 "set cindent
-
-:if has('gui_running')
-    " GUI mode only stuff
-:else
-    colorscheme elflord
-:endif

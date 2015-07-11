@@ -6,13 +6,10 @@
 
 set nocompatible
 
-" Enable loading plugin files for specific file types
-filetype plugin on
-filetype indent on
-
 " VIM-PLUG
 """"""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-sensible'
 Plug 'bling/vim-airline'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'majutsushi/tagbar'
