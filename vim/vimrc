@@ -16,6 +16,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 call plug#end()
