@@ -11,6 +11,12 @@ set nocompatible
 filetype plugin on
 filetype indent on
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VIM-PLUG
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call plug#begin('~/.vim/plugged')
+Plug 'vim-scripts/taglist.vim'
+call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL SETTINGS
