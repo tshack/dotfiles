@@ -16,5 +16,5 @@
     sea = send-email --thread --annotate --chain-reply-to
     co = checkout
     slog = log --oneline
-[credential]
-	helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+#[credential]
+#	helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
