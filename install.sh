@@ -8,6 +8,18 @@ EXTRA_DIR="$HOME/.extra"
 # Update dotfiles itself via git
 [ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
 
+# Can we use sudo?
+groups | grep sudo > /dev/null
+if [ $? == 0 ]; then
+    HAVE_SUDO=true
+fi
+
+# Do we have apt?
+if which apt-get > /dev/null
+then
+    HAVE_APT=true
+fi
+
 source $DOTFILES_DIR/fonts/install
 source $DOTFILES_DIR/vim/install
 source $DOTFILES_DIR/tmux/install

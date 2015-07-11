@@ -2,3 +2,11 @@
 
 ln -sfv "$DOTFILES_DIR/git/gitconfig" ~/.gitconfig
 ln -sfv "$DOTFILES_DIR/git/gitignore" ~/.gitignore
+
+if [ $HAVE_SUDO ] && [ $HAVE_APT ]
+then
+    sudo apt-get install git-email libgnome-keyring-dev
+    pushd /usr/share/doc/git/contrib/credential/gnome-keyring
+    make
+    popd
+fi

@@ -12,5 +12,11 @@ ln -sfv "$DOTFILES_DIR/vim/vimrc" ~/.vimrc
 ln -sfv "$DOTFILES_DIR/vim/gvimrc" ~/.gvimrc
 ln -sfv "$DOTFILES_DIR/vim/autoload/" ~/.vim/
 
+if [ $HAVE_SUDO ] && [ $HAVE_APT ]
+then
+    # YouCompleteMe depends
+    sudo apt-get install cmake build-essential python-dev
+fi
+
 # download & install plugins
 vim -E +PlugInstall +qall
