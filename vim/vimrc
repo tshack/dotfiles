@@ -17,6 +17,10 @@ syntax on
 filetype plugin on
 filetype indent on
 
+for vimfile in split(glob('~/.dotfiles/vim/vimrc.d/*.vim'), '\n')
+    exe 'source' vimfile
+endfor
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM-PLUG
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -147,15 +151,6 @@ if has("autocmd")
       \ endif
     augroup END
 endif " has("autocmd")
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" diff functionality
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Convenient command to see the difference between the current buffer and the
-" file it was loaded from, thus the changes you made.
-command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-        \ | wincmd p | diffthis
 
 
 
