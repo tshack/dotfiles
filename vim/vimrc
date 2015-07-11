@@ -17,6 +17,7 @@ filetype indent on
 call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/taglist.vim'
 Plug 'bling/vim-airline'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 
