@@ -17,14 +17,3 @@ ln -sfv "$DOTFILES_DIR/vim/autoload/" ~/.vim/
 
 # download & install plugins
 vim -E +PlugInstall +qall
-
-# build ycmd for YouCompleteMe if necessary
-if [ ! -f $HOME/.vim/plugged/YouCompleteMe/third_party/ycmd/ycm_client_support.so ]
-then
-    $HOME/.vim/plugged/YouCompleteMe/install.sh
-fi
-
-if [ ! -f $HOME/.vim/plugged/YouCompleteMe/third_party/ycmd/ycm_core.so ]
-then
-    $HOME/.vim/plugged/YouCompleteMe/install.sh
-fi
