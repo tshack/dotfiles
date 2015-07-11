@@ -15,9 +15,10 @@ filetype indent on
 " VIM-PLUG
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
-Plug 'vim-scripts/taglist.vim'
+"Plug 'vim-scripts/taglist.vim'
 Plug 'bling/vim-airline'
 Plug 'Valloric/YouCompleteMe'
+Plug 'majutsushi/tagbar'
 call plug#end()
 
 
@@ -92,24 +93,11 @@ syntax on
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TagList
+" Tagbar
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" exuberant ctags location
-let Tlist_Ctags_Cmd='/usr/bin/ctags'
-" hot key for the taglist
-map T :TlistToggle<CR>
-" don't auto open TagList on supported files
-let Tlist_Auto_Open=0
-" process files even when taglist panel is not open
-let Tlist_Process_File_Always=1
-" close vim if taglist is only windows
-let Tlist_Exit_OnlyWindow=1
-" taglist only shows current file?
-let Tlist_Show_One_File=0
-" auto-fold taglist for all but currently used file?
-let Tlist_File_Fold_Auto_Close=1
-" set width of taglist panel
-let Tlist_WinWidth=40
+map T :TagbarToggle<CR>
+let g:tagbar_left = 1
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Airline
