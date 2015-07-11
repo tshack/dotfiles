@@ -2,7 +2,7 @@ set nowrap
 set number
 set numberwidth=4
 set hlsearch
-set guifont=Literation\ Mono\ Powerline\ 14
+set guifont=Literation\ Mono\ Powerline\ 12
 colorscheme elflord
 
 " use spaces instead of tabs
