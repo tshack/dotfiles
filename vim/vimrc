@@ -16,6 +16,7 @@ Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
 call plug#end()
 
 " I like this more than modifying runtimepath.  Easy to disable
