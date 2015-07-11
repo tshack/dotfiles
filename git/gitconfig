@@ -1,0 +1,20 @@
+[user]
+    name = James A Shackleford
+    email = shack@linux.com
+[sendemail]
+    from = James A Shackleford <shack@linux.com>
+    smtpserver = smtp.gmail.com
+    smtpuser = James.A.Shackleford@gmail.com
+    smtpencryption = tls
+    chainreplyto = true
+    smtpserverport = 587
+[push]
+    default = simple
+[alias]
+    b = branch -v
+    se = send-email --thread --chain-reply-to
+    sea = send-email --thread --annotate --chain-reply-to
+    co = checkout
+    slog = log --oneline
+[credential]
+	helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring

@@ -1,3 +1,4 @@
 # vim:syntax=sh:
 
+ln -sfv "$DOTFILES_DIR/git/gitconfig" ~/.gitconfig
 ln -sfv "$DOTFILES_DIR/git/gitignore" ~/.gitignore
