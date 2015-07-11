@@ -118,6 +118,11 @@ let Tlist_WinWidth=40
 let g:airline_powerline_fonts = 1
 " show all the time (not just when split)
 set laststatus=2
+" always display buffer tab line
+let g:airline#extensions#tabline#enabled = 1
+" cycle buffers using tab
+:nnoremap <Tab> :bnext<CR>
+:nnoremap <S-Tab> :bprevious<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
