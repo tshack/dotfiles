@@ -6,26 +6,13 @@
 
 set nocompatible
 
-set showcmd
-set nowrap
-set number
-set numberwidth=4
-set hlsearch
-syntax on
-
 " Enable loading plugin files for specific file types
 filetype plugin on
 filetype indent on
 
-for vimfile in split(glob('~/.dotfiles/vim/vimrc.d/*.vim'), '\n')
-    exe 'source' vimfile
-endfor
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM-PLUG
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
-"Plug 'vim-scripts/taglist.vim'
 Plug 'bling/vim-airline'
 Plug 'Valloric/YouCompleteMe'
 Plug 'majutsushi/tagbar'
@@ -33,132 +20,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 call plug#end()
 
-map <C-n> :NERDTreeToggle<CR>
-let g:NERDTreeWinPos = "right"
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" GENERAL SETTINGS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-" keep a backup file
-set backup
-" backup location
-set backupdir=~/.vim_backup/
-" keep 50 lines of command line history
-set history=50
-" set font
-set guifont=Literation\ Mono\ Powerline\ 14
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" FORMATTING
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" automatic c code indenting
-"set cindent
-" automatically indent
-set autoindent
-" use spaces instead of tabs
-set expandtab
-" # of characters limited to a line
-set textwidth=78
-" # of spaces for tab
-"set tabstop=8
-set tabstop=4
-" # of spaces for an indent
-set shiftwidth=4
-" round indent to multiple of shiftwidth
-set shiftround
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" FOLDING
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" fold based on indent
-set foldmethod=syntax
-" deepest fold is 10 levels
-set foldnestmax=10
-" dont fold by default
-set nofoldenable
-" this is just what i use
-set foldlevel=1
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Tagbar
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map T :TagbarToggle<CR>
-let g:tagbar_left = 1
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Airline
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" enable powerline font
-let g:airline_powerline_fonts = 1
-" show all the time (not just when split)
-set laststatus=2
-" always display buffer tab line
-"let g:airline#extensions#tabline#enabled = 1
-" use straight buffer tabs
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-" cycle buffers using tab
-:nnoremap <Tab> :bnext<CR>
-:nnoremap <S-Tab> :bprevious<CR>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vim-Script: clang_complete
-"   git clone git://github.com/Rip-Rip/clang_complete.git
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" use libclang.so instead of clang executable
-let g:clang_use_library=1
-" path to libclang.so    [ broken - edit cindex.py directly ]
-let g_clang_library_path='/home/tshack/lib/'
-" automatic suggestion (slow).  manually suggest with ^X^U (or supertab)
-let g:clang_complete_auto=0
-" [popup menu] non-selected item background and text color
-highlight Pmenu guibg=darkslategray
-" [popup menu] selected item background and text color
-highlight PmenuSel guibg=red guifg=white gui=bold
-" [popup menu] set height in # of lines
-set pumheight=15
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vim-Script: SuperTab
-"   git clone git://github.com/ervandew/supertab.git
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" SuperTab option for context aware completion
-let g:SuperTabDefaultCompletionType = "context"
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" autocommand fancy-pants stuff
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Only do this stuff when compiled with support for autocommands.
-if has("autocmd")
-    " Put these in an autocmd group, so that we can delete them easily.
-    augroup vimrcEx
-    au!
-    " When editing a file, always jump to the last known cursor position.
-    " Don't do it when the position is invalid or when inside an event handler
-    " (happens when dropping a file on gvim).
-    autocmd BufReadPost *
-      \ if line("'\"") > 0 && line("'\"") <= line("$") |
-      \   exe "normal! g`\"" |
-      \ endif
-    augroup END
-endif " has("autocmd")
-
-
-
-:if has('gui_running')
-    " GUI mode only stuff
-:else
-    " terminal mode only stuff
-    colorscheme elflord
-:endif
-
-let @s = 'iSigned-off-by: James A Shackleford <shack@linux.com>'
+" I like this more than modifying runtimepath.  Easy to disable
+" by changing the extension from .vim to .disable (for example)
+for vimfile in split(glob('~/.dotfiles/vim/vimrc.d/*.vim'), '\n')
+    exe 'source' vimfile
+endfor
