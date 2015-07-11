@@ -19,4 +19,9 @@ then
 fi
 
 # download & install plugins
-vim -E +PlugInstall +qall
+if [ $SAFE_MODE ]
+then
+    vim -E +PlugInstall1 +qall
+else
+    vim -E +PlugInstall +qall
+fi

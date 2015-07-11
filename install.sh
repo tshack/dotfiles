@@ -8,6 +8,13 @@ EXTRA_DIR="$HOME/.extra"
 # Update dotfiles itself via git
 [ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
 
+# Flag: safe
+# Allow for single thread vim-plug install for accounts with process quoata
+if [ "$1" == "safe" ]
+then
+    SAFE_MODE=true
+fi
+
 # Can we use sudo?
 groups | grep sudo > /dev/null
 if [ $? == 0 ]; then
