@@ -4,8 +4,14 @@
 " UPDATED: 07.10.2015
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" vim mode
 set nocompatible
+
+set showcmd
+set nowrap
+set number
+set numberwidth=4
+set hlsearch
+syntax on
 
 " Enable loading plugin files for specific file types
 filetype plugin on
@@ -20,8 +26,11 @@ Plug 'bling/vim-airline'
 Plug 'Valloric/YouCompleteMe'
 Plug 'majutsushi/tagbar'
 Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
+map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeWinPos = "right"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL SETTINGS
@@ -59,26 +68,8 @@ set shiftround
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" SEARCHING
+" FOLDING
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" do incremental searching
-set incsearch
-" searches wrap from end of file
-set wrapscan
-" highlight searches
-set hlsearch
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" VIRTUAL DISPLAY
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" always show line and column position
-set ruler
-" display incomplete commands
-set showcmd
-" disable line wrapping
-set nowrap
-" enable line numbers
-set number
 " fold based on indent
 set foldmethod=syntax
 " deepest fold is 10 levels
@@ -87,10 +78,6 @@ set foldnestmax=10
 set nofoldenable
 " this is just what i use
 set foldlevel=1
-" line number width
-set numberwidth=4
-" turn on syntax highlighting
-syntax on
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
