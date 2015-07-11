@@ -8,7 +8,7 @@
 set guioptions-=T
 
 " enable mouse
-set mouse=a	
+set mouse=a
 
 " let's be easy on the eyes
 colorscheme slate
