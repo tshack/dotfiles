@@ -1,7 +1,7 @@
 # vim:syntax=sh:
 
 ln -sfv "$DOTFILES_DIR/git/gitconfig" ~/.gitconfig
-ln -sfv "$DOTFILES_DIR/git/gitignore" ~/.gitignore
+ln -sfv "$DOTFILES_DIR/git/gitignore_global" ~/.gitignore_global
 
 #if [ $HAVE_SUDO ] && [ $HAVE_APT ]
 #then

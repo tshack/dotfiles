@@ -16,5 +16,7 @@
     sea = send-email --thread --annotate --chain-reply-to
     co = checkout
     slog = log --oneline
+[core]
+	excludesfile = ~/.gitignore_global
 #[credential]
 #	helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
