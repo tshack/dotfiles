@@ -19,6 +19,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
 Plug 'Valloric/YouCompleteMe'
 Plug 'majutsushi/tagbar'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 
