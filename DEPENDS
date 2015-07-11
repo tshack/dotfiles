@@ -1,0 +1,6 @@
+YouCompleteMe
+-- sudo
+  -- APT
+    -- cmake
+    -- build-essential
+    -- python-dev
