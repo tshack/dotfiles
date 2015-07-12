@@ -14,9 +14,4 @@ install_package build-essential
 install_package python-dev
 
 # download & install plugins
-if [ $SAFE_MODE ]
-then
-    vim -E +PlugInstall1 +qall
-else
-    vim -E +PlugInstall +qall
-fi
+vim -E +PlugInstall +qall
