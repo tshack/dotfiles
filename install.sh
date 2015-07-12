@@ -11,10 +11,8 @@ EXTRA_DIR="$HOME/.extra"
 # Helper functions
 source $DOTFILES_DIR/etc/helpers.sh
 
-# Things we support
-source $DOTFILES_DIR/fonts/install
-source $DOTFILES_DIR/vim/install
-source $DOTFILES_DIR/tmux/install
-source $DOTFILES_DIR/git/install
-source $DOTFILES_DIR/latex/install
-#source $DOTFILES_DIR/zsh/install
+# Run all the installers
+for installer in $DOTFILES_DIR/*/install
+do
+    source $installer
+done
