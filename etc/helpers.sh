@@ -21,7 +21,6 @@ function can_install {
     else
         return 1
     fi
-
 }
 
 function install_package {
