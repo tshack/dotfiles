@@ -1,9 +1,5 @@
 # vim:syntax=sh:
 
-if [ ! -d "$HOME/.vim_backup" ]; then
-    mkdir $HOME/.vim_backup
-fi
-
 if [ ! -d "$HOME/.vim" ]; then
     mkdir $HOME/.vim
 fi
