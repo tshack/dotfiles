@@ -8,8 +8,7 @@ function have_sudo {
 }
 
 function have_apt {
-    if which apt-get > /dev/null
-    then
+    if which apt-get > /dev/null; then
         return 0
     else
         return 1
@@ -29,7 +28,7 @@ function install_package {
     local PKG=$1
     dpkg-query -s $PKG > /dev/null 2>&1
     if [ $? -ne 0 ]; then
-        if [ have_sudo ] && [ have_apt ]; then
+        if [ can_install ]; then
             sudo apt-get install $PKG
         fi
     else
