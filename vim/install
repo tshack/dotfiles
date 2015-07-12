@@ -8,7 +8,7 @@ ln -sfv "$DOTFILES_DIR/vim/vimrc" ~/.vimrc
 ln -sfv "$DOTFILES_DIR/vim/gvimrc" ~/.gvimrc
 ln -sfv "$DOTFILES_DIR/vim/autoload/" ~/.vim/
 
-# Handle YouCompleteMe dependencies
+# YouCompleteMe dependencies
 install_package cmake
 install_package build-essential
 install_package python-dev
