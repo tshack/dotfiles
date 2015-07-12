@@ -16,6 +16,15 @@ function have_apt {
     fi
 }
 
+function can_install {
+    if [ have_sudo ] && [ have_apt ]; then
+        return 0
+    else
+        return 1
+    fi
+
+}
+
 function install_package {
     local PKG=$1
     dpkg-query -s $PKG > /dev/null 2>&1
