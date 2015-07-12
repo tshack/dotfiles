@@ -34,3 +34,14 @@ function install_package {
         return
     fi
 }
+
+function install_symlink {
+    # TODO: Check for errors in here and build an array
+    #       of symlink requests that failed -- for reporting
+    #       at the end of install.sh
+    local SOURCE_FILE=$1
+    local TARGET_FILE=$2
+    SOURCE_FILE=$(readlink -e $DOTFILES_DIR/$SOURCE_FILE)
+
+    ln -sfv "$SOURCE_FILE" "$TARGET_FILE"
+}

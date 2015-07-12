@@ -1,7 +1,7 @@
 # vim:syntax=sh:
 
-ln -sfv "$DOTFILES_DIR/git/gitconfig" ~/.gitconfig
-ln -sfv "$DOTFILES_DIR/git/gitignore_global" ~/.gitignore_global
+install_symlink git/gitconfig        $HOME/.gitconfig
+install_symlink git/gitignore_global $HOME/.gitignore_global
 
 #if [ can_install ]
 #then

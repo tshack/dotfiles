@@ -4,9 +4,9 @@ if [ ! -d "$HOME/.vim" ]; then
     mkdir $HOME/.vim
 fi
 
-ln -sfv "$DOTFILES_DIR/vim/vimrc" ~/.vimrc
-ln -sfv "$DOTFILES_DIR/vim/gvimrc" ~/.gvimrc
-ln -sfv "$DOTFILES_DIR/vim/autoload/" ~/.vim/
+install_symlink vim/vimrc      $HOME/.vimrc
+install_symlink vim/gvimrc     $HOME/.gvimrc
+install_symlink vim/autoload/  $HOME/.vim/
 
 # YouCompleteMe dependencies
 install_package cmake
