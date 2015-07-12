@@ -31,4 +31,5 @@ source $DOTFILES_DIR/fonts/install
 source $DOTFILES_DIR/vim/install
 source $DOTFILES_DIR/tmux/install
 source $DOTFILES_DIR/git/install
+source $DOTFILES_DIR/latex/install
 #source $DOTFILES_DIR/zsh/install

@@ -1,0 +1,2 @@
+# Exclude these verbatim environments from syntax checking
+VerbEnvir { minted }
