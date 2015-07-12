@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
 # Get dotfiles dir (this script can be ran from anywhere)
-export DOTFILES_DIR EXTRA_DIR
+export DOTFILES_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-EXTRA_DIR="$HOME/.extra"
 
 # First update dotfiles via git
 [ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
