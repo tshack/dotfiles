@@ -2,6 +2,7 @@ set nowrap
 set number
 set numberwidth=4
 set hlsearch
+set mouse=a
 set guifont=Literation\ Mono\ Powerline\ 12
 colorscheme elflord
 

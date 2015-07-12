@@ -4,17 +4,11 @@
 " UPDATED: 07.10.2015
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+colorscheme slate
+
 " disable toolbar
 set guioptions-=T
 
-" enable mouse
-set mouse=a
-
-" let's be easy on the eyes
-colorscheme slate
-
-" the standard 80 + line numbers
+" 90x50 gvim sessions
 set columns=90
-
-" make vim usefully tall
 set lines=50
