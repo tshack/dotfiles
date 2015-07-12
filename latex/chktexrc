@@ -1,2 +1,6 @@
 # Exclude these verbatim environments from syntax checking
 VerbEnvir { minted }
+
+# Supress the following warning codes
+#   36: You should put a space in front of parenthesis
+CmdLine { -n36 }
