@@ -21,7 +21,8 @@ The following plugins are currently deployed:
 
 ### Airline
 
-[vim-airlilne](https://github.com/bling/vim-airline)
+[Airlilne](https://github.com/bling/vim-airline) is a lean & mean
+status/tabline for vim that's light as air and written entirely in vimscript.
 
 
 
@@ -73,7 +74,10 @@ Git wrapper of all time.
 
 ### Git Gutter
 
-[vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+[Git Gutter](https://github.com/airblade/vim-gitgutter) is a Vim plugin that
+shows a git diff in the left 'gutter' (sign column). It shows whether each
+line has been added, modified, and where lines have been removed. You can also
+stage and revert individual hunks.
 
 #### Keybindings 
 * `<leader>hs` - stage hunk
