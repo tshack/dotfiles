@@ -53,7 +53,7 @@ Git wrapper of all time.
 * `:Gremove` does a `git rm` on a file and simultaneously deletes the buffer.
 
 * `:Ggrep` searchs the work tree (or any arbitrary commit) with `git grep`,
-  skipping over that which is not tracked in the repository. 
+  skipping over that which is not tracked in the repository.
 
 * `:Glog` loads all previous revisions of a file into the quickfix list so you
   can iterate over them and watch the file evolve!
@@ -79,7 +79,7 @@ shows a git diff in the left 'gutter' (sign column). It shows whether each
 line has been added, modified, and where lines have been removed. You can also
 stage and revert individual hunks.
 
-#### Keybindings 
+#### Keybindings
 * `<leader>hs` - stage hunk
 * `<leader>hr` - revert hunk
 * `<leader>hp` - preview hunk
@@ -90,7 +90,7 @@ stage and revert individual hunks.
 
 [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
 
-#### Keybindings 
+#### Keybindings
 * `<leader>ig` - toggle indent guides
 * `<leader>ie` - enable indent guides
 * `<leader>id` - disable indent guides
@@ -104,7 +104,7 @@ filesystem and to open files and directories. It presents the filesystem to
 you in the form of a tree which you manipulate with the keyboard and/or mouse.
 It also allows you to perform simple filesystem operations.
 
-#### Keybindings 
+#### Keybindings
 * `C-n` - toggle NERDTree (right side)
 
 
@@ -125,7 +125,7 @@ It also allows you to perform simple filesystem operations.
 
 [tagbar](https://github.com/majutsushi/tagbar)
 
-#### Keybindings 
+#### Keybindings
 * `T` - toggle tagbar (left side)
 
 
