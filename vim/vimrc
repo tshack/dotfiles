@@ -9,14 +9,15 @@ set nocompatible
 " VIM-PLUG
 """"""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-sensible'
 Plug 'bling/vim-airline'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
-Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'nathanaelkane/vim-indent-guides'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-sensible'
 Plug 'scrooloose/syntastic'
+Plug 'majutsushi/tagbar'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 call plug#end()
 
 " I like this more than modifying runtimepath.  Easy to disable
