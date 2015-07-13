@@ -63,4 +63,4 @@ command! -nargs=0 FontDefaultSize call FontDefaultSize()
 
 map <Leader>= :FontAdjust 1<CR>
 map <Leader>- :FontAdjust -1<CR>
-map <Leader>1 :FontDefaultSize<CR>
+map <Leader>0 :FontDefaultSize<CR>
