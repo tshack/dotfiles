@@ -8,56 +8,27 @@ using [vim-plug](https://github.com/junegunn/vim-plug).
 
 The following plugins are currently deployed:
 
+* [Airlilne](#markdown-header-airline)
+* [Fugative](#markdown-header-fugative)
+* [Git Gutter](#markdown-header-git-gutter)
+* [Indent Guides](#markdown-header-indent-guides)
 * [NERDTree](#markdown-header-nerdtree)
-* [syntastic](#markdown-header-syntastic)
-* [tagbar](#markdown-header-tagbar)
+* [Sensible](#markdown-header-Sensible)
+* [Syntastic](#markdown-header-syntastic)
+* [Tagbar](#markdown-header-tagbar)
 * [YouCompleteMe](#markdown-header-youcompleteme)
-* [vim-airlilne](#markdown-header-vim-airline)
-* [vim-fugative](#markdown-header-vim-fugative)
-* [vim-gitgutter](#markdown-header-vim-gitgutter)
-* [vim-indent-guides](#markdown-header-vim-indent-guides)
-* [vim-sensible](#markdown-header-vim-sensible)
-
-### NERDTree
-
-[NERDTree](https://github.com/scrooloose/nerdtree) allows you to explore your
-filesystem and to open files and directories. It presents the filesystem to
-you in the form of a tree which you manipulate with the keyboard and/or mouse.
-It also allows you to perform simple filesystem operations.
-
-#### Keybindings 
-* `C-n` - toggle NERDTree (right side)
 
 
-### syntastic
-
-[syntastic](https://github.com/scrooloose/syntastic)
-
-
-### tagbar
-
-[tagbar](https://github.com/majutsushi/tagbar)
-
-#### Keybindings 
-* `T` - toggle tagbar (left side)
-
-
-
-### YouCompleteMe
-
-[YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
-
-#### Keybindings 
-* `<leader>d` - diagnostic information
-
-### vim-airline
+### Airline
 
 [vim-airlilne](https://github.com/bling/vim-airline)
 
 
-### vim-fugative
 
-[vim-fugative](https://github.com/tpope/vim-fugitive)
+### Fugative
+
+[Fugative](https://github.com/tpope/vim-fugitive) may very well be the best
+Git wrapper of all time.
 
 #### Commands
 * `:Gedit`, `:Gsplit`, `:Gvsplit`, `:Gtabedit` - View any blob, tree, commit,
@@ -98,7 +69,9 @@ It also allows you to perform simple filesystem operations.
 
 * `:Git!` can be use to open the output of a command in a temp file.
 
-### vim-gitgutter
+
+
+### Git Gutter
 
 [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
 
@@ -107,7 +80,9 @@ It also allows you to perform simple filesystem operations.
 * `<leader>hr` - revert hunk
 * `<leader>hp` - preview hunk
 
-### vim-indent-guides
+
+
+### Indent Guides
 
 [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
 
@@ -116,7 +91,44 @@ It also allows you to perform simple filesystem operations.
 * `<leader>ie` - enable indent guides
 * `<leader>id` - disable indent guides
 
-### vim-sensible
+
+
+### NERDTree
+
+[NERDTree](https://github.com/scrooloose/nerdtree) allows you to explore your
+filesystem and to open files and directories. It presents the filesystem to
+you in the form of a tree which you manipulate with the keyboard and/or mouse.
+It also allows you to perform simple filesystem operations.
+
+#### Keybindings 
+* `C-n` - toggle NERDTree (right side)
+
+
+
+### Sensible
 
 [vim-sensible](https://github.com/tpope/vim-sensible)
 
+
+
+### Syntastic
+
+[syntastic](https://github.com/scrooloose/syntastic)
+
+
+
+### Tagbar
+
+[tagbar](https://github.com/majutsushi/tagbar)
+
+#### Keybindings 
+* `T` - toggle tagbar (left side)
+
+
+
+### YouCompleteMe
+
+[YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
+
+#### Keybindings 
+* `<leader>d` - diagnostic information
