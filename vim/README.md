@@ -8,15 +8,15 @@ using [vim-plug](https://github.com/junegunn/vim-plug).
 
 The following plugins are currently deployed:
 
-* [NERDTree](#nerdtree)
-* [syntastic](#syntastic)
-* [tagbar](#tagbar)
-* [YouCompleteMe](#youcompleteme)
-* [vim-airlilne](#vim-airline)
-* [vim-fugative](#vim-fugative)
-* [vim-gitgutter](#vim-gitgutter)
-* [vim-indent-guides](#vim-indent-guides)
-* [vim-sensible](#vim-sensible)
+* [NERDTree](#markdown-header-nerdtree)
+* [syntastic](#markdown-header-syntastic)
+* [tagbar](#markdown-header-tagbar)
+* [YouCompleteMe](#markdown-header-youcompleteme)
+* [vim-airlilne](#markdown-header-vim-airline)
+* [vim-fugative](#markdown-header-vim-fugative)
+* [vim-gitgutter](#markdown-header-vim-gitgutter)
+* [vim-indent-guides](#markdown-header-vim-indent-guides)
+* [vim-sensible](#markdown-header-vim-sensible)
 
 ### NERDTree
 
@@ -28,34 +28,48 @@ It also allows you to perform simple filesystem operations.
 
 ### syntastic
 
+[syntastic](https://github.com/scrooloose/syntastic)
+
 
 ### tagbar
+
+[tagbar](https://github.com/majutsushi/tagbar)
+
 
 
 ### YouCompleteMe
 
+[YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
+
+* `<leader>d` - diagnostic information
 
 ### vim-airline
+
+[vim-airlilne](https://github.com/bling/vim-airline)
 
 
 ### vim-fugative
 
+[vim-fugative](https://github.com/tpope/vim-fugitive)
+
 
 ### vim-gitgutter
 
+[vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+
+* `<leader>hs` - stage hunk
+* `<leader>hr` - revert hunk
+* `<leader>hp` - preview hunk
 
 ### vim-indent-guides
 
+[vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
+
+* `<leader>ig` - toggle indent guides
+* `<leader>ie` - enable indent guides
+* `<leader>id` - disable indent guides
 
 ### vim-sensible
 
-* [NERDTree](https://github.com/scrooloose/nerdtree)
-* [syntastic](https://github.com/scrooloose/syntastic)
-* [tagbar](https://github.com/majutsushi/tagbar)
-* [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
-* [vim-airlilne](https://github.com/bling/vim-airline)
-* [vim-fugative](https://github.com/tpope/vim-fugitive)
-* [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
-* [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
-* [vim-sensible](https://github.com/tpope/vim-sensible)
+[vim-sensible](https://github.com/tpope/vim-sensible)
 
