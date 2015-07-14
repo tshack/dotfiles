@@ -10,6 +10,8 @@ set nocompatible
 """"""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
+Plug 'tpope/vim-commentary'
+Plug 'https://bitbucket.org/tshack/vim-fontsize.git'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -18,8 +20,6 @@ Plug 'tpope/vim-sensible'
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
-Plug 'https://bitbucket.org/tshack/vim-fontsize.git'
-"Plug '~/src/vim-fontsize'
 call plug#end()
 
 " I like this more than modifying runtimepath.  Easy to disable
