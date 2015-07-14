@@ -18,6 +18,8 @@ Plug 'tpope/vim-sensible'
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'https://bitbucket.org/tshack/vim-fontsize.git'
+"Plug '~/src/vim-fontsize'
 call plug#end()
 
 " I like this more than modifying runtimepath.  Easy to disable
