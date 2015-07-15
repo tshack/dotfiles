@@ -8,6 +8,7 @@ install_symlink vim/vimrc      $HOME/.vimrc
 install_symlink vim/gvimrc     $HOME/.gvimrc
 install_symlink vim/autoload/  $HOME/.vim/
 install_symlink vim/colors/    $HOME/.vim/
+install_symlink vim/after/     $HOME/.vim/
 
 # YouCompleteMe dependencies
 install_package cmake
