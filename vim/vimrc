@@ -15,12 +15,12 @@ Plug 'https://bitbucket.org/tshack/vim-fontsize.git'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
-"Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-sensible'
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'lervag/vimtex'
 call plug#end()
 
 " I like this more than modifying runtimepath.  Easy to disable
