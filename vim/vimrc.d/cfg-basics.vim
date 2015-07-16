@@ -6,3 +6,5 @@ set mouse=a
 set textwidth=80
 set guifont=Literation\ Mono\ Powerline\ 12
 colorscheme elflord
+let mapleader=','
+let maplocalleader=','
