@@ -6,5 +6,6 @@ set tabstop=4
 set shiftwidth=4
 " round indent to multiple of shiftwidth
 set shiftround
-" automatic c code indenting
-"set cindent
+
+autocmd FileType c set cindent
+autocmd FileType C set noexpandtab
