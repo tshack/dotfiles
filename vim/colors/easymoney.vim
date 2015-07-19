@@ -56,3 +56,4 @@ let colors_name = "easymoney"
 
 " Give the pop-up menu a lime green background w/ black font
 :hi Pmenu ctermfg=2 ctermbg=3 guifg=#000000 guibg=#dfff00
+:hi PmenuSel guibg=#444444 guifg=#ffffff
