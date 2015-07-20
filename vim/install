@@ -9,6 +9,7 @@ install_symlink vim/gvimrc     $HOME/.gvimrc
 install_symlink vim/autoload/  $HOME/.vim/
 install_symlink vim/colors/    $HOME/.vim/
 install_symlink vim/after/     $HOME/.vim/
+install_symlink vim/spell/     $HOME/.vim/
 
 # YouCompleteMe dependencies
 install_package cmake
@@ -17,3 +18,6 @@ install_package python-dev
 
 # download & install plugins
 vim -E +PlugInstall +qall
+
+# build custom spellcheck dictionary
+vim -E +"mkspell ~/.dotfiles/vim/spell/en.utf-8.add" +qall

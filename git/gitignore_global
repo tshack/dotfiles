@@ -4,6 +4,7 @@
 *.so
 *.class
 *.pyc
+*.spl
  
 *.7z
 *.dmg
