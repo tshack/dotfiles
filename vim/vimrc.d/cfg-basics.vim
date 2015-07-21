@@ -8,3 +8,5 @@ set guifont=Literation\ Mono\ Powerline\ 12
 colorscheme elflord
 let mapleader=','
 let maplocalleader=','
+
+map <Leader>c :lcd %:p:h<CR>
