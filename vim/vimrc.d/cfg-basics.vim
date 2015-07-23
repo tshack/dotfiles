@@ -5,7 +5,7 @@ set hlsearch
 set mouse=a
 set textwidth=75
 set guifont=Literation\ Mono\ Powerline\ 12
-colorscheme elflord
+colorscheme easymoney
 let mapleader=','
 let maplocalleader=','
 
