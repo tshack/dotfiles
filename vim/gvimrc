@@ -4,8 +4,6 @@
 " UPDATED: 07.10.2015
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-colorscheme easymoney
-
 " disable toolbar
 set guioptions-=T
 
