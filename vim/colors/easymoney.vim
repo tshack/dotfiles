@@ -249,49 +249,46 @@ call <SID>X("Search",       "f5deb3",   "cd853f",   "none")
             "MatchParen"
 call <SID>X("SpecialKey",	"9acd32",	      "",	"none")
 call <SID>X("Visual",       "f0e68c",   "6b8e23",   "none")
-call <SID>X("LineNr",		"7f7f7f",	      "",	"none")
-
-hi VertSplit guibg=#c2bfa5 guifg=grey40 gui=none cterm=reverse
-hi Folded guibg=black guifg=grey40 ctermfg=grey ctermbg=darkgrey
-hi FoldColumn guibg=black guifg=grey20 ctermfg=4 ctermbg=7
-hi ModeMsg guifg=goldenrod cterm=none ctermfg=brown
-hi MoreMsg guifg=SeaGreen ctermfg=darkgreen
-hi NonText guifg=RoyalBlue guibg=grey15 cterm=bold ctermfg=blue
-hi Question guifg=springgreen ctermfg=green
-hi StatusLine guibg=#c2bfa5 guifg=black gui=none cterm=bold,reverse
-hi StatusLineNC guibg=#c2bfa5 guifg=grey40 gui=none cterm=reverse
-hi Title guifg=gold gui=bold cterm=bold ctermfg=yellow
-hi Statement guifg=CornflowerBlue ctermfg=lightblue
-hi WarningMsg guifg=salmon ctermfg=1
-hi String guifg=SkyBlue ctermfg=darkcyan
-hi Comment term=bold ctermfg=11 guifg=grey40
-hi Constant guifg=#ffa0a0 ctermfg=brown
-hi Special guifg=darkkhaki ctermfg=brown
-hi Identifier guifg=salmon ctermfg=red
-hi Include guifg=red ctermfg=red
-hi PreProc guifg=red guibg=white ctermfg=red
-hi Operator guifg=Red ctermfg=Red
-hi Define guifg=gold gui=bold ctermfg=yellow
-hi Type guifg=CornflowerBlue ctermfg=2
-hi Function guifg=navajowhite ctermfg=brown
-hi Structure guifg=green ctermfg=green
-hi Ignore guifg=grey40 cterm=bold ctermfg=7
-hi Todo guifg=orangered guibg=yellow2
-hi Directory ctermfg=darkcyan
-hi ErrorMsg cterm=bold guifg=White guibg=Red cterm=bold ctermfg=7 ctermbg=1
-hi VisualNOS cterm=bold,underline
-hi WildMenu ctermfg=0 ctermbg=3
-hi DiffAdd ctermbg=4
-hi DiffChange ctermbg=5
-hi DiffDelete cterm=bold ctermfg=4 ctermbg=6
-hi DiffText cterm=bold ctermbg=1
-hi Underlined cterm=underline ctermfg=5
-hi Error guifg=White guibg=Red cterm=bold ctermfg=7 ctermbg=1
-hi SpellErrors guifg=White guibg=Red cterm=bold ctermfg=7 ctermbg=1
-
-" Give the pop-up menu a lime green background w/ black font
-hi Pmenu ctermfg=2 ctermbg=3 guifg=#000000 guibg=#dfff00
-hi PmenuSel guibg=#444444 guifg=#ffffff
+call <SID>X("LineNr",       "7f7f7f",         "",   "none")
+call <SID>X("VertSplit",    "666666",   "c2bfa5",   "none")
+call <SID>X("Folded",       "666666",   "000000",   "none")
+call <SID>X("FoldColumn",   "333333",   "000000",   "none")
+call <SID>X("ModeMsg",      "daa520",         "",   "none")
+call <SID>X("MoreMsg",      "2e8b57",         "",   "none")
+call <SID>X("NonText",      "4169e1",   "262626",   "none")
+call <SID>X("Question",     "00ff7f",         "",   "none")
+call <SID>X("StatusLine",   "000000",   "c2bfa5",   "none")
+call <SID>X("StatusLineNC", "666666",   "c2bfa5",   "none")
+call <SID>X("Title",        "ffd700",         "",   "none")
+call <SID>X("Statement",    "6495ed",         "",   "none")
+call <SID>X("WarningMsg",   "fa8072",         "",   "none")
+call <SID>X("String",       "87ceeb",         "",   "none")
+call <SID>X("Comment",      "666666",         "",   "none")
+call <SID>X("Constant",     "ffa0a0",         "",   "none")
+call <SID>X("Special",      "bdb76b",         "",   "none")
+call <SID>X("Identifier",   "fa8072",         "",   "none")
+call <SID>X("Include",      "ff0000",         "",   "none")
+call <SID>X("PreProc",      "ff0000",   "ffffff",   "none")
+call <SID>X("Operator",     "ff0000",         "",   "none")
+call <SID>X("Define",       "ffd700",         "",   "none")
+call <SID>X("Type",         "6495ed",         "",   "none")
+call <SID>X("Function",     "ffdead",         "",   "none")
+call <SID>X("Structure",    "00ff00",         "",   "none")
+call <SID>X("Ignore",       "666666",         "",   "none")
+call <SID>X("Todo",         "ff4500",   "eeee00",   "none")
+call <SID>X("Directory",    "008b8b",         "",   "none")
+call <SID>X("ErrorMsg",     "ffffff",   "ff0000",   "none")
+            "VisualNOS
+            "WildMenu
+            "DiffAdd
+            "DiffChange
+            "DiffDelete
+            "DiffText
+            "Underlined
+call <SID>X("Error",        "ffffff",   "ff0000",   "none")
+call <SID>X("SpellErrors",  "ffffff",   "ff0000",   "none")
+call <SID>X("Pmenu",        "000000",   "dfff00",   "none")
+call <SID>X("PmenuSel",     "ffffff",   "444444",   "none")
 
 
 " ==== DELECTE FUNCTIONS =====
