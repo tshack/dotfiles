@@ -12,7 +12,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'https://bitbucket.org/tshack/vim-fontsize.git'
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive' | Plug 'gregsexton/gitv'
 Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'scrooloose/nerdtree'
@@ -21,9 +21,7 @@ Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'lervag/vimtex'
-
-" depend: tpope/vim-fugitive
-Plug 'gregsexton/gitv'
+Plug 'kergoth/vim-hilinks', { 'on': ['HLT', 'HLTX'] }
 call plug#end()
 
 " I like this more than modifying runtimepath.  Easy to disable
