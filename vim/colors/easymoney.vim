@@ -291,7 +291,7 @@ call <SID>X("Pmenu",        "000000",   "dfff00",   "none")
 call <SID>X("PmenuSel",     "ffffff",   "444444",   "none")
 
 
-" ==== DELECTE FUNCTIONS =====
+" ==== DELETE FUNCTIONS ======
 delf <SID>X
 delf <SID>rgb
 delf <SID>color
