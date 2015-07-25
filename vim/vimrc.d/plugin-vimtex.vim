@@ -11,3 +11,6 @@ endif
 let g:ycm_semantic_triggers.tex = [
     \ 're!\\[A-Za-z]*(ref|cite)[A-Za-z]*([^]]*])?{([^}]*, ?)*'
     \ ]
+
+" Override tagbar with vimtex-toc-toggle
+autocmd! FileType tex map T <plug>(vimtex-toc-toggle)
