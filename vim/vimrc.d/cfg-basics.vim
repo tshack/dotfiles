@@ -8,5 +8,6 @@ set guifont=Literation\ Mono\ Powerline\ 12
 colorscheme easymoney
 let mapleader=','
 let maplocalleader=','
+let g:tex_flavor = "latex"
 
 map <Leader>c :lcd %:p:h<CR>
