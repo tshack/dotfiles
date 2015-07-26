@@ -10,6 +10,8 @@ install_symlink vim/autoload/  $HOME/.vim/
 install_symlink vim/colors/    $HOME/.vim/
 install_symlink vim/after/     $HOME/.vim/
 install_symlink vim/spell/     $HOME/.vim/
+install_symlink vim/snippets   $HOME/.vim/
+install_symlink vim/UltiSnips  $HOME/.vim/
 
 # YouCompleteMe dependencies
 install_package cmake

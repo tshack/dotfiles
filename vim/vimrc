@@ -22,6 +22,7 @@ Plug 'majutsushi/tagbar'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'lervag/vimtex'
 Plug 'kergoth/vim-hilinks', { 'on': ['HLT', 'HLTX'] }
+Plug 'SirVer/ultisnips'
 call plug#end()
 
 " I like this more than modifying runtimepath.  Easy to disable

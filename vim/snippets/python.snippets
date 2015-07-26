@@ -1,0 +1,36 @@
+snippet #!
+	#!/usr/bin/env python
+	# -*- coding: utf-8 -*-
+
+snippet docs
+	"""
+	File: ${1:`vim_snippets#Filename('$1.py', 'foo.py')`}
+	Author: `g:snips_author`
+	Email: `g:snips_email`
+	Description: ${0}
+	"""
+
+snippet ifmain
+	if __name__ == '__main__':
+		${0:main()}
+
+# New Function
+snippet def
+	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
+		"""${3:docstring for $1}"""
+		${0}
+
+# New Class
+snippet class
+	class ${1:ClassName}(${2:object}):
+		"""${3:docstring for $1}"""
+		def __init__(self, ${4:arg}):
+			${5:super($1, self).__init__()}
+			self.$4 = $4
+			${0}
+
+# New Method
+snippet defm
+	def ${1:mname}(self, ${2:arg}):
+		"""${3:docstring for $1}"""
+		${0}
