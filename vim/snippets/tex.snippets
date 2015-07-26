@@ -38,18 +38,18 @@ snippet table reference to a table
 
 
 ### FIGURE STUFF #####################################################
-snippet fig figure environment (includegraphics)
+snippet fig figure [1 image]
 	\begin{figure}
 	\begin{center}
-		\includegraphics[width=${1}\textwidth]{fig/${2}}
+		\includegraphics[width=${1:0.95}\textwidth]{fig/${2}}
 	\end{center}
 	\caption{${3}}
 	\label{fig:${4:$2}}
 	\end{figure}
 	${0}
 
-snippet wrapfig1 wrapfig environment (1 image)
-	\begin{wrapfigure}{r}{${1}\textwidth}
+snippet fig wrapfigure [1 image]
+	\begin{wrapfigure}{r}{${1:0.33}\textwidth}
 	\vspace{0pt}
 		\includegraphics[width=$1\textwidth]{fig/${2}}
 	\caption{${3}}
@@ -58,8 +58,8 @@ snippet wrapfig1 wrapfig environment (1 image)
 	\end{wrapfigure}
 	${0}
 
-snippet wrapfig2v wrapfig environment (2 vert img)
-	\begin{wrapfigure}{r}{${1}\textwidth}
+snippet fig wrapfigure->tabular [2 vert img]
+	\begin{wrapfigure}{r}{${1:0.33}\textwidth}
 	\vspace{0pt}
 	\begin{tabular}{@{}c@{}}
 		\includegraphics[width=$1\textwidth]{fig/${2}} \\
@@ -71,7 +71,7 @@ snippet wrapfig2v wrapfig environment (2 vert img)
 	\end{wrapfigure}
 	${0}
 
-snippet subfig2h subfig environment (2 horiz img)
+snippet fig figure->subfigure [2 horiz img]
 	\begin{figure}[!t]
 		\centering
 		\subfigure[${1:subcaption}]{%
