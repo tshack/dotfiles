@@ -248,7 +248,7 @@ call <SID>X("IncSearch",    "00ff00",   "000000",   "none")
 call <SID>X("Search",       "f5deb3",   "cd853f",   "none")
             "MatchParen"
 call <SID>X("SpecialKey",	"9acd32",	      "",	"none")
-call <SID>X("Visual",       "f0e68c",   "6b8e23",   "none")
+call <SID>X("Visual",       "000000",   "ffaf00",   "none")
 call <SID>X("LineNr",       "7f7f7f",   "2f2f2f",   "none")
 call <SID>X("VertSplit",    "666666",   "c2bfa5",   "none")
 call <SID>X("Folded",       "666666",   "000000",   "none")
