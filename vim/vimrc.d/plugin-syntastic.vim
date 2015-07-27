@@ -12,3 +12,4 @@ autocmd FileType python let g:syntastic_auto_loc_list = 0
 
 " Open error window manually via :Error or with this leader mapping
 map <Leader>e :Error<CR>
+map <Leader>S :SyntasticToggleMode<CR>
