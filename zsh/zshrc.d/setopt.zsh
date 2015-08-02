@@ -15,13 +15,6 @@ setopt pushd_ignore_dups
 setopt extended_glob
 
 
-## Correction #############################################################
-# spelling correction for commands
-setopt correct
-# spelling correction for arguments
-setopt correctall
-
-
 ## Prompt #################################################################
 # enable parameter expansion, command substitution, and arithmetic
 # expansions
