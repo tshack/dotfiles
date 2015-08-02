@@ -32,3 +32,13 @@ zstyle ':completion:*:*:*:users' ignored-patterns \
         usbmux uucp vcsa wwwrun xfs '_*'
 # enable git version control
 zstyle ':vcs_info:*' enable git
+
+# start typing + Ctrl+k - fuzzy find history backward
+bindkey "^K" up-line-or-search
+# start typing + Ctrl+j - fuzzy find history forward
+bindkey "^J" down-line-or-search
+# [Shift-Tab] - move through the completion menu backwards
+if [[ "${terminfo[kcbt]}" != "" ]]
+then
+  bindkey "${terminfo[kcbt]}" reverse-menu-complete
+fi
