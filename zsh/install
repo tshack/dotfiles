@@ -1,6 +1,9 @@
 # vim:syntax=sh:
 
-if [ -d "$HOME/.oh-my-zsh" ]
-then
-    install_symlink zsh/zshrc $HOME/.zshrc
+install_symlink zsh/zshrc $HOME/.zshrc
+
+if [ ! -d "$HOME/.zsh" ]; then
+    mkdir $HOME/.zsh
 fi
+install_symlink zsh/modules $HOME/.zsh/
+install_symlink zsh/zshrc.d $HOME/.zsh/
