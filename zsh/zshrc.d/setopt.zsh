@@ -14,7 +14,6 @@ setopt pushd_ignore_dups
 # treat #,~, and ^ as part of filename generation patterns
 setopt extended_glob
 
-
 ## Prompt #################################################################
 # enable parameter expansion, command substitution, and arithmetic
 # expansions
