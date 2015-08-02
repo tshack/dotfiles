@@ -10,11 +10,11 @@ autoload -U colors && colors
 # remove right prompt when input typed into prompt
 setopt transient_rprompt
 
-ZSH_PROMPT_MODE_INSERT="%{$fg_bold[green]%}➜ "
-ZSH_PROMPT_MODE_NORMAL="%{$fg_bold[red]%}➜ "
-
 if [ $__ZSH_MODULE_MODAL_PROMPT ]
 then
+    ZSH_PROMPT_MODE_INSERT="%{$fg_bold[green]%}➜ "
+    ZSH_PROMPT_MODE_NORMAL="%{$fg_bold[red]%}➜ "
+
     PROMPT='${ZSH_PROMPT_MODE}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(_zsh_git_branch)%{$fg_bold[blue]%} % %{$reset_color%}'
 else
     PROMPT='%{$fg_bold[cyan]%}%c %{$fg_bold[blue]%}$(_zsh_git_branch)%{$fg_bold[blue]%} % %{$reset_color%}'
