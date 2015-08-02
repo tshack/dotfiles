@@ -22,5 +22,5 @@ system stuff) or vim scripts (for vim stuff).
   management is performed using
   [vim-plug](https://github.com/junegunn/vim-plug).
 
-* [zsh](zsh) -- disabled (total garbage).  I'm still migrating away from
-  [.oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh).
+* [zsh](zsh) -- `zshrc` get symlinked into `$HOME`. `.zsh/` is created
+  and populated with symlinks into `.dotfiles/zsh`
