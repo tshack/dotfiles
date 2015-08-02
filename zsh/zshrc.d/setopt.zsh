@@ -21,3 +21,5 @@ setopt pushd_ignore_dups
 setopt extended_glob
 # parameter expansion, command substitution, arithmetic expansions
 setopt prompt_subst
+# pass bad matches onto the command (i.e. git reset HEAD^1)
+setopt no_nomatch
