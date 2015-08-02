@@ -1,3 +1,11 @@
+# git.zsh
+#
+#   Provides functions useful for integrating
+#   Git repository state information into
+#   the zsh prompt.  From oh-my-zsh
+#
+##################################################
+
 # get the name of the branch we are on
 function git_prompt_info() {
   if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then

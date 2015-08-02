@@ -1,4 +1,10 @@
-## Completion #############################################################
+# completion.zsh
+#
+#   This module handles the way zsh does
+#   completion.
+#
+##################################################
+
 # when completing from the middle of a word, move the curosr to
 # the end of the word
 setopt always_to_end
