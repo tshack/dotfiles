@@ -1,6 +1,8 @@
-# file: suffix.zsh
+# suffix.zsh
 #
 #   This is where suffix aliases live.
+#
+##################################################
 
 # evince
 alias -s pdf=evince

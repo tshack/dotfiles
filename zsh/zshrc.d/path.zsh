@@ -1,3 +1,9 @@
+# path.zsh
+#
+#   This is where PATH gets modified.
+#
+##################################################
+
 # set PATH so it includes private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"

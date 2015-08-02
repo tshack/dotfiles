@@ -1,3 +1,10 @@
+# prompt.zsh
+#
+#   This is where _everything_ related to the
+#   prompt lives.
+#
+##################################################
+
 # enable colors in prompt
 autoload -U colors && colors
 

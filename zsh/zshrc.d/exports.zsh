@@ -1,1 +1,5 @@
-# put exports here
+# exports.zsh
+#
+#   This is where exports live.
+#
+##################################################

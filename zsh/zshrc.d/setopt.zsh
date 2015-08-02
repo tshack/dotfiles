@@ -1,3 +1,9 @@
+# setopt.zsh
+#
+#   This is where misc setopts live.
+#
+##################################################
+
 setopt no_beep
 setopt interactive_comments
 

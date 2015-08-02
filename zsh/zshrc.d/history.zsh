@@ -1,3 +1,10 @@
+# history.zsh
+#
+#   This is where _everything_ related to the
+#   history configuration lives.
+#
+##################################################
+
 HISTSIZE=2000
 SAVEHIST=$HISTSIZE
 HISTFILE=$HOME/.zsh/history
