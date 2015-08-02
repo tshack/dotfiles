@@ -31,3 +31,8 @@ setopt hist_reduce_blanks
 setopt hist_verify
 # don't share history between concurrent shell instances
 setopt no_share_history
+
+# start typing + Ctrl+k - fuzzy find history backward
+bindkey "^K" up-line-or-search
+# start typing + Ctrl+j - fuzzy find history forward
+bindkey "^J" down-line-or-search
