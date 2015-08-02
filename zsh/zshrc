@@ -1,3 +1,5 @@
+compinit -d $HOME/.zsh/zcompdump
+
 source $HOME/.zsh/modules/completion.zsh
 source $HOME/.zsh/modules/package_suggestions.zsh
 source $HOME/.zsh/modules/git.zsh
