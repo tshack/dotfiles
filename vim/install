@@ -17,7 +17,7 @@ install_symlink vim/UltiSnips  $HOME/.vim/
 install_package cmake
 install_package build-essential
 install_package python-dev
-install_package flake8
+install_package python-flake8
 
 # download & install plugins
 vim -E +PlugInstall +qall
