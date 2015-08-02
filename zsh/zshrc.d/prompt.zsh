@@ -1,9 +1,6 @@
 # enable colors in prompt
 autoload -U colors && colors
 
-# prompt uses vim mode
-bindkey -v
-
 function zle-line-init zle-keymap-select {
     case $KEYMAP in
         vicmd)
