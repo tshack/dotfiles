@@ -18,3 +18,5 @@
 *.log
 *.sql
 *.sqlite
+
+build/
