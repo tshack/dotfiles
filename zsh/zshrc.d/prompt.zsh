@@ -1,12 +1,14 @@
 # prompt.zsh
 #
 #   This is where _everything_ related to the
-#   prompt lives.
+#   appearance of the prompt lives.
 #
 ##################################################
 
 # enable colors in prompt
 autoload -U colors && colors
+# remove right prompt when input typed into prompt
+setopt transient_rprompt
 
 function zle-line-init zle-keymap-select {
     case $KEYMAP in

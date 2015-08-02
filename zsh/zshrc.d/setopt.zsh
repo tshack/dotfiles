@@ -19,10 +19,5 @@ setopt pushd_ignore_dups
 ## Expansion and Globbing #################################################
 # treat #,~, and ^ as part of filename generation patterns
 setopt extended_glob
-
-## Prompt #################################################################
-# enable parameter expansion, command substitution, and arithmetic
-# expansions
+# parameter expansion, command substitution, arithmetic expansions
 setopt prompt_subst
-# remove right prompt when input typed into prompt
-setopt transient_rprompt
