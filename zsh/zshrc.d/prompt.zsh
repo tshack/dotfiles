@@ -14,6 +14,9 @@ function _zsh_prompt_git {
     local branch=$(_zsh_git_branch)
     if [ ! -z $branch ]
     then
+        # add on the the prompt if the git repo is dirty
+        # what is add is different depending on if we are
+        # using the modal_prompt module
         if [ $(_zsh_git_dirty) == "0" ]
         then
             if [ $__ZSH_MODULE_MODAL_PROMPT ]
@@ -42,6 +45,8 @@ then
 
     ZSH_PROMPT_MODE_INSERT=$ZSH_PROMPT_DIR_INSERT
     ZSH_PROMPT_MODE_NORMAL=$ZSH_PROMPT_DIR_NORMAL
+    # this will be changed by zle via the modal_prompt module
+    ZSH_PROMPT_MODE=$ZSH_PROMPT_MODE_INSERT
 
     PROMPT='${ZSH_PROMPT_MODE}$(_zsh_prompt_git)%{%f%b%k%} '
 #    ORMAL  +0 ~3 -0  master  ~/.dotfiles/zsh/z
