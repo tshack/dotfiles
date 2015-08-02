@@ -7,3 +7,8 @@ if [ ! -d "$HOME/.zsh" ]; then
 fi
 install_symlink zsh/modules $HOME/.zsh/
 install_symlink zsh/zshrc.d $HOME/.zsh/
+
+# this directory stores completion caches per host
+if [ ! -d "$HOME/.zsh/cache" ]; then
+    mkdir $HOME/.zsh/cache
+fi

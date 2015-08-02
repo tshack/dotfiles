@@ -18,8 +18,8 @@ zstyle ':completion:*:*:*:*:*' menu select
 # disable named-directories autocompletion
 zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
 # use caching so that commands like apt and dpkg complete are useable
-zstyle ':completion::complete:*' use-cache 1
-zstyle ':completion::complete:*' cache-path $ZSH_CACHE_DIR
+zstyle ':completion::complete:*' use-cache on
+zstyle ':completion::complete:*' cache-path $HOME/.zsh/cache/$HOST
 # don't complete uninteresting users
 zstyle ':completion:*:*:*:users' ignored-patterns \
         adm amanda apache at avahi avahi-autoipd beaglidx bin cacti canna \
@@ -30,3 +30,5 @@ zstyle ':completion:*:*:*:users' ignored-patterns \
         operator pcap polkitd postfix postgres privoxy pulse pvm quagga radvd \
         rpc rpcuser rpm rtkit scard shutdown squid sshd statd svn sync tftp \
         usbmux uucp vcsa wwwrun xfs '_*'
+# enable git version control
+zstyle ':vcs_info:*' enable git
