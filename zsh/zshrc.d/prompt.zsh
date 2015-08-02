@@ -24,7 +24,7 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
-PROMPT='${ZSH_PROMPT_MODE}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(_zsh_git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+PROMPT='${ZSH_PROMPT_MODE}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(_zsh_git_branch)%{$fg_bold[blue]%} % %{$reset_color%}'
 
 ZSH_GIT_PROMPT_PREFIX="(%{$fg[red]%}"
 ZSH_GIT_PROMPT_SUFFIX="%{$reset_color%}"
