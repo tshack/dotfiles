@@ -11,12 +11,14 @@ function _zsh_git_branch() {
   if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then
     ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
-    echo "$ZSH_GIT_PROMPT_PREFIX${ref#refs/heads/}$(_zsh_git_dirty)$ZSH_GIT_PROMPT_SUFFIX"
+    echo "$ZSH_GIT_BRANCH_PREFIX${ref#refs/heads/}$ZSH_GIT_BRANCH_SUFFIX"
   fi
 }
 
 
 # Checks if working tree is dirty
+#   return: 0 (dirty)
+#           1 (clean)
 _zsh_git_dirty() {
   local STATUS=''
   local FLAGS
@@ -31,9 +33,9 @@ _zsh_git_dirty() {
     STATUS=$(command git status ${FLAGS} 2> /dev/null | tail -n1)
   fi
   if [[ -n $STATUS ]]; then
-    echo "$ZSH_GIT_PROMPT_DIRTY"
+    echo 0
   else
-    echo "$ZSH_GIT_PROMPT_CLEAN"
+    echo 1
   fi
 }
 
