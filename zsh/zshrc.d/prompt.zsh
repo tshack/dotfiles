@@ -19,7 +19,7 @@ function _zsh_prompt_git {
         # using the modal_prompt module
         if [ $(_zsh_git_dirty) == "0" ]
         then
-            echo "%{%K{236}%} %{%F{190}%} ${branch} %{%b%F{236}%}"
+            echo "%{%K{236}%} %{%F{214}%} ${branch} %{%b%F{236}%}"
         else
             echo "%{%K{238}%} %{%F{231}%} ${branch} %{%b%F{238}%}"
         fi
@@ -28,8 +28,8 @@ function _zsh_prompt_git {
 
 ZSH_PROMPT_GIT_BRANCH=$(_zsh_git_branch)
 
-ZSH_PROMPT_MODE_INSERT="%{%K{190}%}%{%B%F{16}%} %c %{%b%F{190}%}"
-ZSH_PROMPT_MODE_NORMAL="%{%K{39}%}%{%B%F{16}%} %c %{%b%F{39}%}"
+ZSH_PROMPT_MODE_INSERT="%{%K{214}%}%{%B%F{16}%} %c %{%b%F{214}%}"
+ZSH_PROMPT_MODE_NORMAL="%{%K{255}%}%{%B%F{16}%} %c %{%b%F{255}%}"
 # this will be changed by zle via the modal_prompt module
 ZSH_PROMPT_MODE=$ZSH_PROMPT_MODE_INSERT
 
