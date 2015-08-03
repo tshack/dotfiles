@@ -14,7 +14,14 @@ function _zsh_prompt_git {
     local branch=$(_zsh_git_branch)
     if [ ! -z $branch ]
     then
-        # add on the the prompt if the git repo is dirty
+
+        # make prompt collapse
+        if [ $COLUMNS -lt 50 ]
+        then
+            branch="\b"
+        fi
+
+        # add on the prompt if the git repo is dirty
         # what is add is different depending on if we are
         # using the modal_prompt module
         if [ $(_zsh_git_dirty) == "0" ]
