@@ -1,4 +1,5 @@
-autoload compinit -d $HOME/.zsh/zcompdump
+autoload compinit
+compinit -d $HOME/.zsh/zcompdump
 
 # use vim mode
 bindkey -v
