@@ -11,6 +11,10 @@ autoload -U colors && colors
 setopt transient_rprompt
 
 function _zsh_prompt_git {
+    local bg_color=$1
+    local clean_color=$2
+    local dirty_color=$3
+
     local branch=$(_zsh_git_branch)
     if [ ! -z $branch ]
     then
@@ -26,9 +30,9 @@ function _zsh_prompt_git {
         # using the modal_prompt module
         if [ $(_zsh_git_dirty) == "0" ]
         then
-            echo "%{%K{236}%} %{%F{214}%} ${branch} %{%b%F{236}%}"
+            echo "%{%K{$bg_color}%} %{%F{$dirty_color}%} ${branch} %{%b%F{$bg_color}%}"
         else
-            echo "%{%K{238}%} %{%F{231}%} ${branch} %{%b%F{238}%}"
+            echo "%{%K{$bg_color}%} %{%F{$clean_color}%} ${branch} %{%b%F{$bg_color}%}"
         fi
     fi
 }
@@ -37,7 +41,10 @@ ZSH_PROMPT_GIT_BRANCH=$(_zsh_git_branch)
 
 ZSH_PROMPT_MODE_INSERT="%{%K{214}%}%{%B%F{16}%} %c %{%b%F{214}%}"
 ZSH_PROMPT_MODE_NORMAL="%{%K{255}%}%{%B%F{16}%} %c %{%b%F{255}%}"
+ZSH_PROMPT_GRAYSCALE="%{%K{244}%}%{%B%F{16}%} %c %{%b%F{244}%}"
+
 # this will be changed by zle via the modal_prompt module
 ZSH_PROMPT_MODE=$ZSH_PROMPT_MODE_INSERT
 
-PROMPT='${ZSH_PROMPT_MODE}$(_zsh_prompt_git)%{%f%b%k%} '
+ZSH_PROMPT='${ZSH_PROMPT_MODE}$(_zsh_prompt_git 236 231 214)%{%f%b%k%} '
+ZSH_PROMPT_FROZEN='${ZSH_PROMPT_GRAYSCALE}$(_zsh_prompt_git 236 251 244)%{%f%b%k%} '
