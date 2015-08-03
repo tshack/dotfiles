@@ -19,37 +19,18 @@ function _zsh_prompt_git {
         # using the modal_prompt module
         if [ $(_zsh_git_dirty) == "0" ]
         then
-            if [ $__ZSH_MODULE_MODAL_PROMPT ]
-            then
-                echo "%{%K{yellow}%} %{%F{black}%} ${branch} %{%b%F{yellow}%}"
-            else
-                echo "(%{$fg[red]%}${branch}%{$fg[blue]%}) %{$fg[yellow]%}✗%{$reset_color%}"
-            fi
+            echo "%{%K{236}%} %{%F{190}%} ${branch} %{%b%F{236}%}"
         else
-            if [ $__ZSH_MODULE_MODAL_PROMPT ]
-            then
-                echo "%{%K{green}%} %{%F{black}%} ${branch} %{%b%F{green}%}"
-            else
-                echo "(%{$fg[red]%}${branch}%{$fg[blue]%})"
-            fi
+            echo "%{%K{238}%} %{%F{231}%} ${branch} %{%b%F{238}%}"
         fi
     fi
 }
 
-if [ $__ZSH_MODULE_MODAL_PROMPT ]
-then
-    ZSH_PROMPT_DIR_INSERT="%{%K{black}%}%{%B%F{yellow}%} %c %{%b%F{black}%}"
-    ZSH_PROMPT_DIR_NORMAL="%{%K{red}%}%{%B%F{yellow}%} %c %{%b%F{red}%}"
+ZSH_PROMPT_GIT_BRANCH=$(_zsh_git_branch)
 
-    ZSH_PROMPT_GIT_BRANCH=$(_zsh_git_branch)
+ZSH_PROMPT_MODE_INSERT="%{%K{190}%}%{%B%F{16}%} %c %{%b%F{190}%}"
+ZSH_PROMPT_MODE_NORMAL="%{%K{39}%}%{%B%F{16}%} %c %{%b%F{39}%}"
+# this will be changed by zle via the modal_prompt module
+ZSH_PROMPT_MODE=$ZSH_PROMPT_MODE_INSERT
 
-    ZSH_PROMPT_MODE_INSERT=$ZSH_PROMPT_DIR_INSERT
-    ZSH_PROMPT_MODE_NORMAL=$ZSH_PROMPT_DIR_NORMAL
-    # this will be changed by zle via the modal_prompt module
-    ZSH_PROMPT_MODE=$ZSH_PROMPT_MODE_INSERT
-
-    PROMPT='${ZSH_PROMPT_MODE}$(_zsh_prompt_git)%{%f%b%k%} '
-#    ORMAL  +0 ~3 -0  master  ~/.dotfiles/zsh/z
-else
-    PROMPT='%{$fg_bold[cyan]%}%c %{$fg_bold[blue]%}$(_zsh_prompt_git)%{$fg_bold[blue]%} % %{$reset_color%}'
-fi
+PROMPT='${ZSH_PROMPT_MODE}$(_zsh_prompt_git)%{%f%b%k%} '
