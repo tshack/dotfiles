@@ -37,14 +37,14 @@ function _zsh_prompt_git {
     fi
 }
 
-ZSH_PROMPT_GIT_BRANCH=$(_zsh_git_branch)
+ZSHACK_PROMPT_GIT_BRANCH=$(_zsh_git_branch)
 
-ZSH_PROMPT_MODE_INSERT="%{%K{214}%}%{%B%F{16}%} %c %{%b%F{214}%}"
-ZSH_PROMPT_MODE_NORMAL="%{%K{190}%}%{%B%F{16}%} %c %{%b%F{190}%}"
-ZSH_PROMPT_GRAYSCALE="%{%K{244}%}%{%B%F{16}%} %c %{%b%F{244}%}"
+ZSHACK_PROMPT_MODE_INSERT="%{%K{214}%}%{%B%F{16}%} %c %{%b%F{214}%}"
+ZSHACK_PROMPT_MODE_NORMAL="%{%K{190}%}%{%B%F{16}%} %c %{%b%F{190}%}"
+ZSHACK_PROMPT_GRAYSCALE="%{%K{244}%}%{%B%F{16}%} %c %{%b%F{244}%}"
 
 # this will be changed by zle via the modal_prompt module
-ZSH_PROMPT_MODE=$ZSH_PROMPT_MODE_INSERT
+ZSHACK_PROMPT_MODE=$ZSHACK_PROMPT_MODE_INSERT
 
-ZSH_PROMPT='${ZSH_PROMPT_MODE}$(_zsh_prompt_git 237 231 214)%{%f%b%k%} '
-ZSH_PROMPT_FROZEN='${ZSH_PROMPT_GRAYSCALE}$(_zsh_prompt_git 236 251 244)%{%f%b%k%} '
+ZSHACK_PROMPT='${ZSHACK_PROMPT_MODE}$(_zsh_prompt_git 237 231 214)%{%f%b%k%} '
+ZSHACK_PROMPT_FROZEN='${ZSHACK_PROMPT_GRAYSCALE}$(_zsh_prompt_git 236 251 244)%{%f%b%k%} '
