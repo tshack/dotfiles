@@ -37,8 +37,6 @@ function _zsh_prompt_git {
     fi
 }
 
-ZSHACK_PROMPT_GIT_BRANCH=$(_zsh_git_branch)
-
 ZSHACK_PROMPT_MODE_INSERT="%{%K{214}%}%{%B%F{16}%} %c %{%b%F{214}%}"
 ZSHACK_PROMPT_MODE_NORMAL="%{%K{190}%}%{%B%F{16}%} %c %{%b%F{190}%}"
 ZSHACK_PROMPT_GRAYSCALE="%{%K{244}%}%{%B%F{16}%} %c %{%b%F{244}%}"
