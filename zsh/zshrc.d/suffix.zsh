@@ -24,3 +24,24 @@ alias -s jpg=eog
 alias -s png=eog
 alias -s gif=eog
 alias -s tif=eog
+
+# LibreOffice
+alias -s odt=libreoffice
+alias -s ott=libreoffice
+alias -s odm=libreoffice
+alias -s oth=libreoffice
+alias -s ods=libreoffice
+alias -s ots=libreoffice
+alias -s odg=libreoffice
+alias -s otg=libreoffice
+alias -s odp=libreoffice
+alias -s otp=libreoffice
+alias -s odf=libreoffice
+alias -s odb=libreoffice
+#### MS Support
+alias -s doc=libreoffice
+alias -s docx=libreoffice
+alias -s xls=libreoffice
+alias -s xlsx=libreoffice
+alias -s ppt=libreoffice
+alias -s pptx=libreoffice
