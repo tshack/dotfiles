@@ -1,4 +1,4 @@
-# zshack (get it?)
+# zshack /ˈʒæk/ (get it?)
 
 Requires zsh 5.0.7 or better.
 
