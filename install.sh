@@ -15,24 +15,29 @@ ERRORS=()
 source $DOTFILES_DIR/etc/helpers.sh
 probe_capabilities
 
-# If a specific installer is specified, run only it;
+# If a specific installer is specified, or if a list
+# of specific installers is given, run only those;
 # otherwise, just install everything
-if [ -z $1 ]
+if [ "$#" -eq 0 ]
 then
+    echo "--------- INSTALLING EVERYTHING ---------"
     # Run all the installers
     for installer in $DOTFILES_DIR/*/install
     do
         source $installer
     done
 else
-    # Run specified installer (if it exists)
-    INSTALLER=$DOTFILES_DIR/$1/install
-    if [ -e $INSTALLER ]
-    then
-        source $INSTALLER
-    else
-        log_error "Invalid installer specified"
-    fi
+    for prog in $@
+    do
+        # Run specified installer (if it exists)
+        INSTALLER=$DOTFILES_DIR/$prog/install
+        if [ -e $INSTALLER ]
+        then
+            source $INSTALLER
+        else
+            log_error "Invalid installer specified: $prog"
+        fi
+    done
 fi
 
 # Report any errors
