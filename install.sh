@@ -40,11 +40,4 @@ else
     done
 fi
 
-# Report any errors
-echo "====================================="
-echo "  Installation Complete: [${#ERRORS[@]} Errors]"
-echo "====================================="
-for msg in "${ERRORS[@]}"
-do
-    echo $msg
-done
+report_errors

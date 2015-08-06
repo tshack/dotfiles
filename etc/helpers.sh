@@ -3,6 +3,16 @@ function log_error {
     ERRORS=("${ERRORS[@]}" "- $MSG")
 }
 
+function report_errors {
+    echo "====================================="
+    echo "  Installation Complete: [${#ERRORS[@]} Errors]"
+    echo "====================================="
+    for msg in "${ERRORS[@]}"
+    do
+        echo $msg
+    done
+}
+
 function have_sudo {
     groups | grep sudo > /dev/null 2>&1
     if [ $? == 0 ]; then
