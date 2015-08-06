@@ -13,6 +13,12 @@ function report_errors {
     done
 }
 
+function print_program {
+    INSTALLER=$1
+    local tmp=${INSTALLER#"$DOTFILES_DIR/"}
+    echo "# ${tmp%"/install"}"
+}
+
 function have_sudo {
     groups | grep sudo > /dev/null 2>&1
     if [ $? == 0 ]; then

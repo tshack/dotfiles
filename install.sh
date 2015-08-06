@@ -20,6 +20,7 @@ then
     # Run all the installers
     for installer in $DOTFILES_DIR/*/install
     do
+        print_program $installer
         source $installer
     done
 else
@@ -29,6 +30,7 @@ else
         INSTALLER=$DOTFILES_DIR/$prog/install
         if [ -e $INSTALLER ]
         then
+            print_program $INSTALLER
             source $INSTALLER
         else
             log_error "Invalid installer specified: $prog"
