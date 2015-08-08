@@ -245,7 +245,7 @@ call <SID>X("Cursor",       "708090",   "f0e68c",   "none")
             "Question
             "IncSearch
 call <SID>X("IncSearch",    "00ff00",   "000000",   "none")
-call <SID>X("Search",       "f5deb3",   "cd853f",   "none")
+call <SID>X("Search",       "000000",   "cd853f",   "none")
             "MatchParen"
 call <SID>X("SpecialKey",	"9acd32",	      "",	"none")
 call <SID>X("Visual",       "000000",   "ffaf00",   "none")
