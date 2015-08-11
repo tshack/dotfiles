@@ -75,3 +75,8 @@ Modelable
 codebase
 MD5
 FreeRTOS
+tex
+latexmk
+latexmkrc
+pdflatex
+xelatex
