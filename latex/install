@@ -1,3 +1,4 @@
 # vim:syntax=sh:
 
-install_symlink latex/chktexrc $HOME/.chktexrc
+install_symlink latex/chktexrc  $HOME/.chktexrc
+install_symlink latex/latexmkrc $HOME/.latexmkrc
