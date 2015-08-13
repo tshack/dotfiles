@@ -3,6 +3,7 @@ let g:vimtex_latexmk_background = 0
 let g:vimtex_motion_enabled = 0
 let g:vimtex_index_show_help = 0
 let g:vimtex_index_split_width = 40
+let g:vimtex_latexmk_build_dir = './output/'
 
 " Integrate with YouCompleteMe for \cite{} and \ref{} autocompletion
 if !exists('g:ycm_semantic_triggers')
