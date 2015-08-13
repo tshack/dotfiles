@@ -4,4 +4,4 @@ VerbEnvir { minted }
 # Supress the following warning codes
 #    8: You /may/ be using the wrong dash (annoying)
 #   36: You should put a space in front of parenthesis
-CmdLine { -n8,36 }
+CmdLine { -n8 -n36 }
