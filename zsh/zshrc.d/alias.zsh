@@ -15,3 +15,5 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
+alias espeak='espeak -v mb-en1 -s 120'
