@@ -6,6 +6,7 @@ if [ ! -d "$HOME/.zsh" ]; then
     mkdir $HOME/.zsh
 fi
 install_symlink zsh/modules $HOME/.zsh/
+install_symlink zsh/prompts $HOME/.zsh/
 install_symlink zsh/zshrc.d $HOME/.zsh/
 
 # this directory stores completion caches per host

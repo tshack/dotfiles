@@ -1,2 +1,2 @@
 # Default prompt is the powerline prompt
-source ../prompts/powerline.zsh
+source $HOME/.zsh/prompts/powerline.zsh
