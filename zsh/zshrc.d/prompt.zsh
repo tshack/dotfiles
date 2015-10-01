@@ -29,5 +29,5 @@ if strcontains $TERM "256color"
 then
     chprompt powerline
 else
-    chprompt basic
+    chprompt hardtimes
 fi
