@@ -19,3 +19,4 @@ set pgp_timeout = 60
 set crypt_verify_sig = yes
 set crypt_replysign = yes
 set crypt_replyencrypt = yes
+set pgp_auto_decode = yes
