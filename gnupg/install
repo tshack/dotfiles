@@ -1,0 +1,3 @@
+# vim:syntax=sh:
+
+install_symlink gnupg/gpg.conf $HOME/.gnupg/gpg.conf
