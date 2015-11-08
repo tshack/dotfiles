@@ -1,4 +1,4 @@
-source "gpg -d ~/.mutt/encrypted.gpg |"
+source "gpg -d ~/.mutt/mutt.gpg |"
 
 set folder = "imaps://imap.gmail.com:993"
 set spoolfile = "+PGP"
