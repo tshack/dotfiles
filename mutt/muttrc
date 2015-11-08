@@ -1,0 +1,21 @@
+source "gpg -d ~/.mutt/encrypted.gpg |"
+
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+PGP"
+set postponed="+[Gmail]/Drafts"
+
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+
+set move = no
+
+macro index \Ch '<tag-prefix><pipe-entry>/home/tshack/scripts/mutt/frommutt^M' "output git patches"
+bind index G imap-fetch-mail
+
+set pgp_use_gpg_agent = yes
+set pgp_ignore_subkeys = no
+set pgp_timeout = 60
+set crypt_verify_sig = yes
+set crypt_replysign = yes
+set crypt_replyencrypt = yes
