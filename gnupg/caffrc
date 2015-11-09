@@ -15,13 +15,13 @@ $CONFIG{'email'} = 'shack@linux.com';
 #   $CONFIG{'keyid'} = [ qw{FEDCBA9876543210} ];
 #  or, if you have more than one key:
 #   $CONFIG{'keyid'} = [ qw{0123456789ABCDEF 89ABCDEF76543210} ];
-$CONFIG{'keyid'} = [ qw{F9D38FC14BB9614B} ];
+$CONFIG{'keyid'} = [ qw{FEBE2144D5870ED3} ];
 
 # Select this/these keys to sign with
-#$CONFIG{'local-user'} = [ qw{F9D38FC14BB9614B} ];
+#$CONFIG{'local-user'} = [ qw{FEBE2144D5870ED3} ];
 
 # Additionally encrypt messages for these keyids
-#$CONFIG{'also-encrypt-to'} = [ qw{F9D38FC14BB9614B} ];
+#$CONFIG{'also-encrypt-to'} = [ qw{FEBE2144D5870ED3} ];
 
 # Mail template to use for the encrypted part
 $CONFIG{'mail-template'} = << 'EOM';
