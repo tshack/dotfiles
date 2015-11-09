@@ -2,4 +2,11 @@
 
 if [ -d "$HOME/.gnupg" ]; then
     install_symlink gnupg/gpg.conf $HOME/.gnupg/gpg.conf
+    install_symlink gnupg/caffrc $HOME/.caffrc
+    if [ ! -d "$HOME/.caff" ]; then
+        mkdir -p $HOME/.caff/gnupghome
+    fi
+    # caff does stupid shit like defaulting to SHA-1 sigs...
+    # let's use our own settings instead
+    install_symlink gnupg/gpg.conf $HOME/.caff/gnupghome/gpg.conf
 fi
