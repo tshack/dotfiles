@@ -9,4 +9,7 @@ if [ -d "$HOME/.gnupg" ]; then
     # caff does stupid shit like defaulting to SHA-1 sigs...
     # let's use our own settings instead
     install_symlink gnupg/gpg.conf $HOME/.caff/gnupghome/gpg.conf
+
+    install_package hopenpgp-tools
+    install_package signing-party
 fi
