@@ -12,4 +12,11 @@ if [ -d "$HOME/.gnupg" ]; then
 
     install_package hopenpgp-tools
     install_package signing-party
+
+    # stuff needed by smart cards
+    install_package pinentry-curses
+    install_package libccid
+    install_package pcscd
+    install_package scdaemon
+    install_package libksba8
 fi
