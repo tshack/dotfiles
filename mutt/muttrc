@@ -27,8 +27,6 @@ bind pager k previous-line
 bind pager g top
 bind pager G bottom
 
-
-
 ## PGP #####################################################
 set pgp_use_gpg_agent = yes
 set pgp_ignore_subkeys = no
@@ -43,3 +41,7 @@ set pgp_encrypt_sign_command="/usr/lib/mutt/pgpewrap gpg --passphrase-fd 0 --bat
 ## LOOK & FEEL #############################################
 set edit_headers
 set markers
+
+## REPLYING TO MAIL ########################################
+set fast_reply = yes  # take default subject & recipients
+set include = yes     # include origional message in reply
