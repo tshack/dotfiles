@@ -41,6 +41,7 @@ set pgp_encrypt_sign_command="/usr/lib/mutt/pgpewrap gpg --passphrase-fd 0 --bat
 ## LOOK & FEEL #############################################
 set edit_headers
 set markers
+set pager_stop = yes # stop @ end (don't show next message)
 
 ## REPLYING TO MAIL ########################################
 set fast_reply = yes  # take default subject & recipients
