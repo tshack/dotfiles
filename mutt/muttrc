@@ -3,7 +3,7 @@ source "gpg -d ~/.mutt/mutt.gpg |"
 ## GENERAL #################################################
 set folder = "imaps://imap.gmail.com:993"
 set spoolfile = "+PGP"
-set postponed="+[Gmail]/Drafts"
+set postponed = "+[Gmail]/Drafts"
 
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
@@ -12,7 +12,8 @@ set move = no
 
 ## MACROS & HOTKEYS ########################################
 macro index \Ch '<tag-prefix><pipe-entry>/home/tshack/scripts/mutt/frommutt^M' "output git patches"
-bind index G imap-fetch-mail     # [G]et mail from server
+
+bind index i imap-fetch-mail
 
 bind index,attach g first-entry
 bind index,attach G last-entry
