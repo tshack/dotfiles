@@ -1,6 +1,7 @@
 [user]
     name = James A Shackleford
     email = shack@linux.com
+    signingkey = 221B96CE
 [sendemail]
     from = James A Shackleford <shack@linux.com>
     smtpserver = smtp.gmail.com
