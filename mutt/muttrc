@@ -14,11 +14,20 @@ set move = no
 macro index \Ch '<tag-prefix><pipe-entry>/home/tshack/scripts/mutt/frommutt^M' "output git patches"
 bind index G imap-fetch-mail     # [G]et mail from server
 
-bind pager J next-undeleted      # \ Vim keys for flipping
-bind pager K previous-undeleted  # /   between messages
+bind index,attach g first-entry
+bind index,attach G last-entry
 
-bind pager j next-line           # \ Vim keys for scrolling
-bind pager k previous-line       # /   lines within messages
+# vim keys for flipping between messages
+bind pager J next-undeleted
+bind pager K previous-undeleted
+
+# vim keys for moving around messages
+bind pager j next-line
+bind pager k previous-line
+bind pager g top
+bind pager G bottom
+
+
 
 ## PGP #####################################################
 set pgp_use_gpg_agent = yes
