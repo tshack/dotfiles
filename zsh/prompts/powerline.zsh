@@ -7,8 +7,6 @@
 
 # enable colors in prompt
 autoload -U colors && colors
-# remove right prompt when input typed into prompt
-setopt transient_rprompt
 
 function _zsh_prompt_git {
     local bg_color=$1
@@ -37,6 +35,15 @@ function _zsh_prompt_git {
     fi
 }
 
+function _zsh_prompt_virtualenv {
+    if [ ! -z "$VIRTUAL_ENV" ]
+    then
+        echo "%{%F{244}%}("$(basename $VIRTUAL_ENV)")"
+    else
+        echo ''
+    fi
+}
+
 ZSHACK_PROMPT_MODE_INSERT="%{%K{214}%}%{%B%F{16}%} %c %{%b%F{214}%}"
 ZSHACK_PROMPT_MODE_NORMAL="%{%K{190}%}%{%B%F{16}%} %c %{%b%F{190}%}"
 ZSHACK_PROMPT_GRAYSCALE="%{%K{244}%}%{%B%F{16}%} %c %{%b%F{244}%}"
@@ -46,3 +53,5 @@ ZSHACK_PROMPT_MODE=$ZSHACK_PROMPT_MODE_INSERT
 
 ZSHACK_PROMPT='${ZSHACK_PROMPT_MODE}$(_zsh_prompt_git 237 231 214)%{%f%b%k%} '
 ZSHACK_PROMPT_FROZEN='${ZSHACK_PROMPT_GRAYSCALE}$(_zsh_prompt_git 236 251 244)%{%f%b%k%} '
+
+ZSHACK_RPROMPT='$(_zsh_prompt_virtualenv)'

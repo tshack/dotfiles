@@ -1,6 +1,8 @@
 function zle-line-init zle-keymap-select {
     echoti smkx
     PROMPT=$ZSHACK_PROMPT
+    RPROMPT=$ZSHACK_RPROMPT
+
     case $KEYMAP in
         vicmd)
             ZSHACK_PROMPT_MODE=$ZSHACK_PROMPT_MODE_NORMAL
