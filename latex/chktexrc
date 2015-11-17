@@ -1,6 +1,9 @@
 # Exclude these verbatim environments from syntax checking
 VerbEnvir { minted }
 
+# Commas go *before* ending quotes. Go read a damn grammar book.
+QuoteStyle = Traditional
+
 # Supress the following warning codes
 #    8: You /may/ be using the wrong dash (annoying)
 #   36: You should put a space in front of parenthesis
