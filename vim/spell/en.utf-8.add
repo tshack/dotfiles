@@ -80,3 +80,5 @@ latexmk
 latexmkrc
 pdflatex
 xelatex
+absorbance
+brightfield
