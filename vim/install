@@ -1,4 +1,12 @@
 # vim:syntax=sh:
+#
+# Don't do any of this junk if Vim isn't installed
+bin_exists vim
+if [ $? -ne 0 ]; then
+    echo " [ Vim not installed ]"
+    return 0
+fi
+
 
 if [ ! -d "$HOME/.vim" ]; then
     mkdir $HOME/.vim
