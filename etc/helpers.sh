@@ -153,3 +153,12 @@ function install_symlink {
         log_error "Symlink failure: $SOURCE_FILE -> $TARGET_FILE"
     fi
 }
+
+function bin_exists {
+    command -v $1 > /dev/null 2>&1
+    if [ $? -ne 0 ]; then
+        return 1
+    else
+        return 0
+    fi
+}
