@@ -1,0 +1,37 @@
+# vim:syntax=sh:
+
+# This file just hooks neovim's configuration into vim's
+
+# Don't do any of this junk if neovim isn't installed
+bin_exists nvim
+if [ $? -ne 0 ]; then
+    echo " [ Neovim not installed ]"
+    return 0
+fi
+
+
+if [ ! -d "$HOME/.config/nvim" ]; then
+    mkdir -p $HOME/.config/nvim
+fi
+
+user_install_python2_package neovim
+
+install_symlink vim/vimrc      $HOME/.config/nvim/init.vim
+install_symlink vim/autoload   $HOME/.config/nvim/
+install_symlink vim/colors/    $HOME/.config/nvim/
+install_symlink vim/after/     $HOME/.config/nvim/
+install_symlink vim/spell/     $HOME/.config/nvim/
+install_symlink vim/snippets   $HOME/.config/nvim/
+install_symlink vim/UltiSnips  $HOME/.config/nvim/
+
+# YouCompleteMe dependencies
+install_package cmake
+install_package build-essential
+install_package python-dev
+install_package python-flake8
+
+# download & install plugins
+nvim -E +PlugInstall +qall
+
+# build custom spellcheck dictionary
+nvim -E +"mkspell ~/.dotfiles/vim/spell/en.utf-8.add" +qall
