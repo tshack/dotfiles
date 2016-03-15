@@ -73,6 +73,32 @@ function install_package {
     fi
 }
 
+function user_install_python2_package {
+    local PKG=$1
+    pip2 list | grep $PKG > /dev/null 2>&1
+    if [ $? -ne 0 ]; then
+        pip install --user -q $PKG
+        if [ $? -ne 0 ]; then
+            log_error "Failed to install python2 package: $PKG"
+        fi
+    else
+        return
+    fi
+}
+
+function user_install_python3_package {
+    local PKG=$1
+    pip3 list | grep $PKG > /dev/null 2>&1
+    if [ $? -ne 0 ]; then
+        pip install --user -q $PKG
+        if [ $? -ne 0 ]; then
+            log_error "Failed to install python3 package: $PKG"
+        fi
+    else
+        return
+    fi
+}
+
 ## POSIX Compliant replacement for readlink ########################
 function _prepend_path_if_relative {
     case "$2" in
