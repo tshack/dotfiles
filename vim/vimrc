@@ -11,6 +11,7 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-commentary'
+Plug 'vim-scripts/Conque-GDB'
 Plug 'tshack/vim-fontsize'
 Plug 'tpope/vim-fugitive' | Plug 'gregsexton/gitv'
 Plug 'airblade/vim-gitgutter'
