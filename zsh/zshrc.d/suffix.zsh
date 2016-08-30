@@ -24,6 +24,7 @@ alias -s jpg=eog
 alias -s png=eog
 alias -s gif=eog
 alias -s tif=eog
+alias -s tiff=eog
 
 # LibreOffice
 alias -s odt=libreoffice
