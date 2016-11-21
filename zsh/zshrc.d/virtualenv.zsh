@@ -5,8 +5,16 @@
 #
 ##################################################
 
-VIRTUAL_ENV_WRAPPER="/usr/local/bin/virtualenvwrapper.sh"
-if [ -f $VIRTUAL_ENV_WRAPPER ]
-then
-    source $VIRTUAL_ENV_WRAPPER
-fi
+VIRTUAL_ENV_WRAPPER_LOCATIONS=(
+    "/usr/local/bin/virtualenvwrapper.sh"
+    "/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
+)
+
+for VIRTUAL_ENV_WRAPPER in $VIRTUAL_ENV_WRAPPER_LOCATIONS;
+do
+    if [ -f $VIRTUAL_ENV_WRAPPER ]
+    then
+        source $VIRTUAL_ENV_WRAPPER
+        break
+    fi
+done
