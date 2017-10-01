@@ -12,3 +12,4 @@ let g:tex_flavor = "latex"
 
 map <Leader>c :lcd %:p:h<CR>
 map <Leader>w :%s/\s\+$//<CR>
+map <Leader>r :set relativenumber!<CR>
