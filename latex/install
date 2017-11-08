@@ -1,4 +1,6 @@
 # vim:syntax=sh:
 
+install_package python-pygments
+
 install_symlink latex/chktexrc  $HOME/.chktexrc
 install_symlink latex/latexmkrc $HOME/.latexmkrc
