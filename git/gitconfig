@@ -18,6 +18,7 @@
     co = checkout
     slog = log --oneline
     stat = status -sb
+    files = show --name-status
 [core]
     excludesfile = ~/.gitignore_global
     editor = vim
