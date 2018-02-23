@@ -28,9 +28,9 @@ function _zsh_prompt_git {
         # using the modal_prompt module
         if [ $(_zsh_git_dirty) == "0" ]
         then
-            echo "%{%K{$bg_color}%} %{%F{$dirty_color}%} ${branch} %{%b%F{$bg_color}%}"
+            echo "%{%K{$bg_color}%} %{%F{$dirty_color}%} ${branch} %{%b%k%F{$bg_color}%}"
         else
-            echo "%{%K{$bg_color}%} %{%F{$clean_color}%} ${branch} %{%b%F{$bg_color}%}"
+            echo "%{%K{$bg_color}%} %{%F{$clean_color}%} ${branch} %{%b%k%F{$bg_color}%}"
         fi
     fi
 }
@@ -44,9 +44,9 @@ function _zsh_prompt_virtualenv {
     fi
 }
 
-ZSHACK_PROMPT_MODE_INSERT="%{%K{214}%}%{%B%F{16}%} %c %{%b%F{214}%}"
-ZSHACK_PROMPT_MODE_NORMAL="%{%K{190}%}%{%B%F{16}%} %c %{%b%F{190}%}"
-ZSHACK_PROMPT_GRAYSCALE="%{%K{244}%}%{%B%F{16}%} %c %{%b%F{244}%}"
+ZSHACK_PROMPT_MODE_INSERT="%{%K{214}%}%{%B%F{16}%} %c %{%b%k%F{214}%}"
+ZSHACK_PROMPT_MODE_NORMAL="%{%K{190}%}%{%B%F{16}%} %c %{%b%k%F{190}%}"
+ZSHACK_PROMPT_GRAYSCALE="%{%K{244}%}%{%B%F{16}%} %c %{%b%k%F{244}%}"
 
 # this will be changed by zle via the modal_prompt module
 ZSHACK_PROMPT_MODE=$ZSHACK_PROMPT_MODE_INSERT
