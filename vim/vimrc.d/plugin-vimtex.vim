@@ -1,3 +1,17 @@
+let g:vimtex_compiler_latexmk = {
+    \ 'backend' : 'process',
+    \ 'background' : 0,
+    \ 'continuous' : 0,
+    \ 'callback' : 0,
+    \ 'options' : [
+    \   '-pdf',
+    \   '-verbose',
+    \   '-file-line-error',
+    \   '-synctex=1',
+    \   '-interaction=nonstopmode'
+    \ ]
+    \ }
+
 let g:vimtex_latexmk_continuous = 0
 let g:vimtex_latexmk_background = 0
 let g:vimtex_motion_enabled = 0
