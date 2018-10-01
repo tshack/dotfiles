@@ -4,9 +4,16 @@
 #
 ##################################################
 
-# evince
-alias -s pdf=evince
-alias -s eps=evince
+
+# PDF & EPS
+if which evince > /dev/null 2>&1
+then
+    alias -s pdf=evince
+    alias -s eps=evince
+elif which xreader > /dev/null 2>&1
+then
+    alias -s pdf=xreader
+fi
 
 # vlc
 alias -s xspf=vlc
