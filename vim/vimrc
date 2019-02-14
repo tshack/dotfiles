@@ -26,6 +26,7 @@ Plug 'lervag/vimtex'
 Plug 'kergoth/vim-hilinks', { 'on': ['HLT', 'HLTX'] }
 Plug 'SirVer/ultisnips'
 Plug 'sirtaj/vim-openscad'
+Plug 'junegunn/limelight.vim'
 call plug#end()
 
 " I like this more than modifying runtimepath.  Easy to disable
