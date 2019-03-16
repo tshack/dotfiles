@@ -1,0 +1,3 @@
+# vim:syntax=sh:
+
+install_symlink guile/guile $HOME/.guile
