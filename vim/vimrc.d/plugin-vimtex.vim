@@ -5,6 +5,7 @@ let g:vimtex_compiler_latexmk = {
     \ 'callback' : 0,
     \ 'options' : [
     \   '-pdf',
+    \   '-xelatex',
     \   '-verbose',
     \   '-file-line-error',
     \   '-synctex=1',
