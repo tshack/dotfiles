@@ -21,7 +21,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-sensible'
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clangd-completer' }
 Plug 'lervag/vimtex'
 Plug 'kergoth/vim-hilinks', { 'on': ['HLT', 'HLTX'] }
 Plug 'SirVer/ultisnips'
