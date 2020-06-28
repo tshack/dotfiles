@@ -15,6 +15,7 @@ let g:syntastic_loc_list_height=4
 " libraries (i.e. networkx).  Use pyflakes instead, which is a more
 " reasonable checker for constant in-editor checking.
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_javascript_checkers = ['eslint']
 
 " Open error window manually via :Error or with this leader mapping
 map <Leader>e :Error<CR>
