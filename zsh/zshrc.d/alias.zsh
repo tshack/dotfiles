@@ -22,3 +22,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 alias espeak='espeak -v mb-en1 -s 120'
+
+# import machine specific aliases
+if [ -f $HOME/.aliases ]; then
+    source $HOME/.aliases
+fi
