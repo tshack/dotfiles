@@ -11,6 +11,8 @@
     smtpserverport = 587
 [push]
     default = simple
+[pull]
+    rebase = false
 [alias]
     b = branch -v
     se = send-email --thread --chain-reply-to
