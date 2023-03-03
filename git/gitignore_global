@@ -23,6 +23,8 @@
 
 .project
 
+cscope.out
+
 build*/
 node_modules/
 .cache/
