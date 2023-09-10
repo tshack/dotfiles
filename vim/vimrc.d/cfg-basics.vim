@@ -10,6 +10,10 @@ let mapleader=','
 let maplocalleader=','
 let g:tex_flavor = "latex"
 
+set completeopt=menu
+
+autocmd FileType rust set completeopt=menu,popup
+
 map <Leader>c :lcd %:p:h<CR>
 map <Leader>w :%s/\s\+$//<CR>
 map <Leader>r :set relativenumber!<CR>
