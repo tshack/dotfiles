@@ -288,8 +288,8 @@ call <SID>X("ErrorMsg",     "ffffff",   "ff0000",   "none")
             "Underlined
 call <SID>X("Error",        "ffffff",   "ff0000",   "none")
 call <SID>X("SpellErrors",  "ffffff",   "ff0000",   "none")
-call <SID>X("Pmenu",        "000000",   "dfff00",   "none")
-call <SID>X("PmenuSel",     "ffffff",   "444444",   "none")
+call <SID>X("Pmenu",        "ffffff",   "383838",   "none")
+call <SID>X("PmenuSel",     "000000",   "dfff00",   "none")
 
 
 " ==== DELETE FUNCTIONS ======
