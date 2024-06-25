@@ -5,3 +5,4 @@
 ##################################################
 
 export LD_LIBRARY_PATH
+export LIBVA_DRIVER_NAME
