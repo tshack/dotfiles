@@ -29,6 +29,7 @@ Plug 'sirtaj/vim-openscad'
 Plug 'junegunn/limelight.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'https://gitlab.com/gabmus/vim-blueprint'
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 " I like this more than modifying runtimepath.  Easy to disable
